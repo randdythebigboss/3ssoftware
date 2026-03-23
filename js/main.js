@@ -180,24 +180,45 @@
   }
 
   /* ============================================================
-     CONTACT FORM — Formspree (static site / GitHub Pages)
+     CONTACT FORM — Formspree via fetch (static site / GitHub Pages)
      ============================================================
      This form uses Formspree to handle submissions from a static
-     site (GitHub Pages). Submission is a normal HTML POST — no
-     JavaScript interception. The spinner is shown on submit for
-     UX feedback; Formspree then redirects to the _next URL.
+     site (GitHub Pages). Submitted via fetch so there is no redirect
+     and the success/error UI states are shown inline.
      ============================================================ */
   const contactForm = document.querySelector('#contactForm');
+
   if (contactForm) {
 
-    contactForm.addEventListener('submit', function () {
-      // Show spinner while the browser POSTs to Formspree
-      const submitBtn = this.querySelector('[type="submit"]');
-      if (submitBtn) {
-        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>&nbsp; Enviando...';
-        submitBtn.disabled = true;
+    contactForm.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const form = this;
+      const submitBtn = form.querySelector('[type="submit"]');
+
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>&nbsp; Enviando...';
+      submitBtn.disabled = true;
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch('https://formspree.io/f/xeeryepz', {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.style.display = 'none';
+          document.querySelector('.form-success').style.display = 'block';
+        } else {
+          throw new Error('Formspree response not ok');
+        }
+
+      } catch (error) {
+        form.style.display = 'none';
+        document.querySelector('.form-error').style.display = 'block';
       }
-      // No e.preventDefault() — form submits normally to Formspree
     });
 
     // Clear validation highlight on input

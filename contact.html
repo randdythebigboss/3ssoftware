@@ -185,7 +185,6 @@
               method="POST"
             >
               <!-- Formspree control fields -->
-              <input type="hidden" name="_next" value="https://randdythebigboss.github.io/3ssoftware/">
               <input type="hidden" name="_subject" value="Nuevo contacto desde 3S Software">
               <input type="text"   name="_gotcha"  style="display:none" tabindex="-1" autocomplete="off">
               <div class="form-row">
@@ -252,7 +251,7 @@
             </form>
 
             <!-- Success State -->
-            <div class="form-success" aria-live="polite">
+            <div class="form-success" aria-live="polite" style="display:none;">
               <i class="fa-solid fa-circle-check"></i>
               <h3 data-i18n="form.ok.title">¡Mensaje enviado!</h3>
               <p data-i18n="form.ok.text">Gracias por contactarnos. Le responderemos a la brevedad posible.</p>
@@ -275,7 +274,7 @@
                 <a href="https://wa.me/18097031161" class="btn btn-whatsapp" target="_blank" rel="noopener">
                   <i class="fa-brands fa-whatsapp"></i> WhatsApp
                 </a>
-                <button class="btn btn-outline-dark" onclick="document.querySelector('.form-error').style.display='none';document.querySelector('#contact-form').style.display='block';">
+                <button class="btn btn-outline-dark" onclick="document.querySelector('.form-error').style.display='none';document.querySelector('#contactForm').style.display='block';">
                   <i class="fa-solid fa-rotate-right"></i> Intentar de nuevo
                 </button>
               </div>
