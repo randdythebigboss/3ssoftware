@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contacte a System Shop Solutions 3S — WhatsApp, email y formulario de contacto. República Dominicana." />
+  <title>Contacto | System Shop Solutions 3S</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- EmailJS SDK — Required for contact form email delivery -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar white" role="navigation">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-mark">3S</div>
+        <div class="logo-text">
+          <span class="logo-name">System Shop Solutions</span>
+          <span class="logo-tag">Technology Company</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+        <li><a href="services.html" data-i18n="nav.services">Servicios</a></li>
+        <li><a href="solutions.html" data-i18n="nav.solutions">Soluciones</a></li>
+        <li><a href="about.html" data-i18n="nav.about">Nosotros</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <a href="https://wa.me/18097031161" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+        <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="nav-mobile" id="mobile-menu">
+    <button class="nav-mobile-close" style="position:absolute;top:24px;right:24px;font-size:1.5rem;color:rgba(255,255,255,.7);background:none;border:none;cursor:pointer;">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <a href="index.html" data-i18n="nav.home">Inicio</a>
+    <a href="services.html" data-i18n="nav.services">Servicios</a>
+    <a href="solutions.html" data-i18n="nav.solutions">Soluciones</a>
+    <a href="about.html" data-i18n="nav.about">Nosotros</a>
+    <a href="contact.html" data-i18n="nav.contact">Contacto</a>
+    <div class="nav-mobile-footer">
+      <a href="https://wa.me/18097031161" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      </a>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero-content">
+      <span class="section-label section-label--light" data-i18n="nav.contact">Contacto</span>
+      <h1 data-i18n="con.page.title">Contáctenos</h1>
+      <p data-i18n="con.page.sub">Estamos listos para escuchar sus necesidades y diseñar la solución perfecta para su empresa.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT LAYOUT -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Contact Info -->
+        <div class="contact-info reveal-left">
+          <h3 data-i18n="con.info.title">Háblenos de su proyecto</h3>
+          <p data-i18n="con.info.text">Nuestro equipo de especialistas está disponible para responder sus preguntas, agendar una demostración o comenzar a trabajar en su proyecto.</p>
+
+          <div class="contact-items">
+
+            <!-- Emails -->
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact-item-text">
+                <strong data-i18n="con.email.label">Correo Electrónico</strong>
+                <a href="mailto:randdyfeliz@hotmail.com" style="display:block;">randdyfeliz@hotmail.com</a>
+                <a href="mailto:ranyelfeliz@hotmail.com" style="display:block;">ranyelfeliz@hotmail.com</a>
+                <a href="mailto:felizarnold@gmail.com" style="display:block;">felizarnold@gmail.com</a>
+              </div>
+            </div>
+
+            <!-- WhatsApp Primary -->
+            <div class="contact-item">
+              <div class="contact-item-icon" style="background:#E8F5E9;color:#2E7D32;">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div class="contact-item-text">
+                <strong data-i18n="con.phone.label">WhatsApp Principal</strong>
+                <span>+1 809 703 1161</span>
+              </div>
+            </div>
+
+            <!-- WhatsApp Secondary -->
+            <div class="contact-item">
+              <div class="contact-item-icon" style="background:#E8F5E9;color:#2E7D32;">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div class="contact-item-text">
+                <strong data-i18n="con.phone2.label">WhatsApp Secundario</strong>
+                <span>+1 809 219 2667</span>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact-item-text">
+                <strong>Ubicación</strong>
+                <span>República Dominicana</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- WhatsApp Buttons -->
+          <div class="wa-buttons">
+            <a href="https://wa.me/18097031161?text=Hola,%20estoy%20interesado%20en%20sus%20soluciones%20tecnol%C3%B3gicas."
+               class="btn btn-whatsapp"
+               target="_blank" rel="noopener" data-i18n="con.wa1">
+              <i class="fa-brands fa-whatsapp"></i> Escribir por WhatsApp
+            </a>
+            <a href="https://wa.me/18092192667?text=Hola,%20estoy%20interesado%20en%20sus%20soluciones%20tecnol%C3%B3gicas."
+               class="btn btn-outline-dark"
+               target="_blank" rel="noopener" data-i18n="con.wa2">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp Alternativo
+            </a>
+          </div>
+
+          <!-- Principal Contact -->
+          <div class="principal-contact-card" style="margin-top:40px;position:relative;">
+            <div style="position:absolute;top:-10px;left:24px;">
+              <span class="section-label" data-i18n="con.principal.label" style="background:var(--c-white);padding:0 6px;font-size:.65rem;">Dirección General</span>
+            </div>
+            <div class="principal-contact-avatar">RF</div>
+            <div class="principal-contact-info">
+              <div class="name" data-i18n="con.principal.name">Ramón Feliz</div>
+              <div class="role" data-i18n="con.principal.role">Gerente General · System Shop Solutions 3S</div>
+              <div class="contact-line">
+                <i class="fa-brands fa-whatsapp"></i>
+                <a href="https://wa.me/18097031161" target="_blank" rel="noopener">+1 809 703 1161</a>
+              </div>
+              <div class="contact-line">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:randdyfeliz@hotmail.com">randdyfeliz@hotmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="reveal-right">
+          <div class="contact-form-card">
+            <h2 class="form-title" data-i18n="form.title">Envíenos un Mensaje</h2>
+            <p class="form-subtitle" data-i18n="form.sub">Complete el formulario y le responderemos a la brevedad.</p>
+
+            <!--
+              ============================================================
+              CONTACT FORM — EmailJS Integration
+              ============================================================
+              Email delivery is handled via EmailJS (emailjs.com).
+              Configuration is in js/main.js → EMAILJS_CONFIG object.
+
+              Setup checklist:
+                1. Create account at https://www.emailjs.com
+                2. Add an Email Service (Gmail, Outlook, SMTP…) → copy Service ID
+                3. Create Template "notification" (company receives inquiry):
+                     To Email: randdyfeliz@hotmail.com (set in template)
+                     CC:       ranyelfeliz@hotmail.com, felizarnold@gmail.com
+                     Variables: {{from_name}}, {{from_email}}, {{company}},
+                                {{phone}}, {{service}}, {{message}}
+                4. Create Template "autoreply" (client confirmation):
+                     To Email: {{to_email}}
+                     Variables: {{to_name}}
+                5. Copy Public Key from Account → API Keys
+                6. Fill EMAILJS_CONFIG values in js/main.js
+              ============================================================
+            -->
+            <form id="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="f-name" data-i18n="form.name">Nombre Completo</label>
+                  <input type="text" id="f-name" name="name" required autocomplete="name"
+                    data-i18n-placeholder="form.ph.name" placeholder="Juan Pérez" />
+                </div>
+                <div class="form-group">
+                  <label for="f-company" data-i18n="form.company">Empresa</label>
+                  <input type="text" id="f-company" name="company" autocomplete="organization"
+                    data-i18n-placeholder="form.ph.company" placeholder="Mi Empresa S.R.L." />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="f-email" data-i18n="form.email">Correo Electrónico</label>
+                  <input type="email" id="f-email" name="email" required autocomplete="email"
+                    data-i18n-placeholder="form.ph.email" placeholder="juan@empresa.com" />
+                </div>
+                <div class="form-group">
+                  <label for="f-phone" data-i18n="form.phone">Teléfono</label>
+                  <input type="tel" id="f-phone" name="phone" autocomplete="tel"
+                    data-i18n-placeholder="form.ph.phone" placeholder="+1 809 000 0000" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="f-service" data-i18n="form.service">Servicio de interés</label>
+                <select id="f-service" name="service">
+                  <option value="" data-i18n="form.opt0">Seleccione un servicio...</option>
+                  <option value="dev" data-i18n="form.opt1">Desarrollo de Software a Medida</option>
+                  <option value="auto" data-i18n="form.opt2">Automatización de Procesos (Power Platform)</option>
+                  <option value="itsm" data-i18n="form.opt3">Implementación de Jira / ITSM / CMDB</option>
+                  <option value="ecf" data-i18n="form.opt4">Facturación Electrónica (e-CF DGII)</option>
+                  <option value="pos" data-i18n="form.opt5">Sistema Punto de Venta (POS)</option>
+                  <option value="conta" data-i18n="form.opt6">Sistema Contable</option>
+                  <option value="inv" data-i18n="form.opt9">Control de Inventario</option>
+                  <option value="rrhh" data-i18n="form.opt10">Recursos Humanos / Nómina</option>
+                  <option value="edu" data-i18n="form.opt11">Plataforma Educativa / Sistema Escolar</option>
+                  <option value="int" data-i18n="form.opt12">Integración de Sistemas</option>
+                  <option value="cons" data-i18n="form.opt7">Consultoría Tecnológica</option>
+                  <option value="sup" data-i18n="form.opt13">Soporte Técnico Empresarial</option>
+                  <option value="dt" data-i18n="form.opt14">Transformación Digital</option>
+                  <option value="other" data-i18n="form.opt8">Otro</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="f-msg" data-i18n="form.message">Mensaje</label>
+                <textarea id="f-msg" name="message" rows="5" required
+                  data-i18n-placeholder="form.ph.message"
+                  placeholder="Cuéntenos sobre su proyecto o necesidad..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;" data-i18n="form.submit">
+                <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje
+              </button>
+
+              <p style="font-size:.8rem;color:var(--c-muted);text-align:center;margin-top:14px;" data-i18n="form.privacy">
+                <i class="fa-solid fa-lock"></i> Su información es confidencial y no será compartida con terceros.
+              </p>
+            </form>
+
+            <!-- Success State -->
+            <div class="form-success" aria-live="polite">
+              <i class="fa-solid fa-circle-check"></i>
+              <h3 data-i18n="form.ok.title">¡Mensaje enviado!</h3>
+              <p data-i18n="form.ok.text">Gracias por contactarnos. Le responderemos a la brevedad posible.</p>
+              <div style="margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+                <a href="https://wa.me/18097031161" class="btn btn-whatsapp" target="_blank" rel="noopener">
+                  <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="index.html" class="btn btn-outline-dark">
+                  <i class="fa-solid fa-house"></i> Inicio
+                </a>
+              </div>
+            </div>
+
+            <!-- Error State -->
+            <div class="form-error" aria-live="polite" style="display:none;">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <h3 data-i18n="form.err.title">No se pudo enviar el mensaje</h3>
+              <p data-i18n="form.err.text">Ocurrió un error al enviar su mensaje. Por favor intente de nuevo o contáctenos por WhatsApp.</p>
+              <div style="margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+                <a href="https://wa.me/18097031161" class="btn btn-whatsapp" target="_blank" rel="noopener">
+                  <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </a>
+                <button class="btn btn-outline-dark" onclick="document.querySelector('.form-error').style.display='none';document.querySelector('#contact-form').style.display='block';">
+                  <i class="fa-solid fa-rotate-right"></i> Intentar de nuevo
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ADDITIONAL INFO ROW -->
+  <section class="section--sm section--bg">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+
+        <div class="feature-card reveal reveal-delay-1" style="text-align:center;">
+          <div class="feature-icon" style="margin:0 auto 16px;"><i class="fa-solid fa-clock"></i></div>
+          <h3 style="margin-bottom:8px;">Respuesta Rápida</h3>
+          <p style="font-size:.875rem;">Respondemos en menos de 24 horas en días hábiles.</p>
+        </div>
+
+        <div class="feature-card reveal reveal-delay-2" style="text-align:center;">
+          <div class="feature-icon" style="margin:0 auto 16px;"><i class="fa-solid fa-handshake"></i></div>
+          <h3 style="margin-bottom:8px;">Consulta Sin Costo</h3>
+          <p style="font-size:.875rem;">Primera consulta gratuita para evaluar sus necesidades tecnológicas.</p>
+        </div>
+
+        <div class="feature-card reveal reveal-delay-3" style="text-align:center;">
+          <div class="feature-icon" style="margin:0 auto 16px;"><i class="fa-solid fa-shield-check"></i></div>
+          <h3 style="margin-bottom:8px;">Información Segura</h3>
+          <p style="font-size:.875rem;">Su información es completamente confidencial y segura con nosotros.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo" style="margin-bottom:0;">
+            <div class="logo-mark">3S</div>
+            <div class="logo-text">
+              <span class="logo-name">System Shop Solutions</span>
+              <span class="logo-tag">Technology Company</span>
+            </div>
+          </div>
+          <p class="footer-desc" data-i18n="footer.desc">Empresa dominicana especializada en soluciones tecnológicas empresariales con más de 18 años de experiencia.</p>
+          <div class="footer-socials">
+            <a href="https://wa.me/18097031161" class="footer-social" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:randdyfeliz@hotmail.com" class="footer-social"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.nav">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+            <li><a href="services.html" data-i18n="nav.services">Servicios</a></li>
+            <li><a href="solutions.html" data-i18n="nav.solutions">Soluciones</a></li>
+            <li><a href="about.html" data-i18n="nav.about">Nosotros</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.services">Servicios</h4>
+          <ul class="footer-links">
+            <li><a href="services.html" data-i18n="footer.srv1">Desarrollo de Software</a></li>
+            <li><a href="services.html" data-i18n="footer.srv2">Automatización</a></li>
+            <li><a href="services.html" data-i18n="footer.srv3">Gestión de TI</a></li>
+            <li><a href="services.html" data-i18n="footer.srv4">Consultoría</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.contact">Contacto</h4>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item"><i class="fa-brands fa-whatsapp"></i><span>+1 809 703 1161</span></div>
+            <div class="footer-contact-item"><i class="fa-brands fa-whatsapp"></i><span>+1 809 219 2667</span></div>
+            <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>randdyfeliz@hotmail.com</span></div>
+            <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>ranyelfeliz@hotmail.com</span></div>
+            <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>felizarnold@gmail.com</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy" data-i18n="footer.copy">© 2024 System Shop Solutions 3S. Todos los derechos reservados.</p>
+        <div class="footer-legal">
+          <a href="#" data-i18n="footer.privacy">Privacidad</a>
+          <a href="#" data-i18n="footer.terms">Términos</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

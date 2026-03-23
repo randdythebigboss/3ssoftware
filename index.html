@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="System Shop Solutions 3S — Soluciones tecnológicas que impulsan el crecimiento de su negocio. Software empresarial, automatización y consultoría en República Dominicana." />
+  <title>System Shop Solutions 3S | Inicio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    /* Dashboard gradient fill */
+    .dw-chart-fill { fill: url(#chartGrad); opacity: .25; }
+    .dw-line-path { fill: none; stroke: #2196F3; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVBAR
+       ============================================================ -->
+  <nav class="navbar transparent" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="System Shop Solutions 3S">
+        <div class="logo-mark">3S</div>
+        <div class="logo-text">
+          <span class="logo-name">System Shop Solutions</span>
+          <span class="logo-tag">Technology Company</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+        <li><a href="services.html" data-i18n="nav.services">Servicios</a></li>
+        <li><a href="solutions.html" data-i18n="nav.solutions">Soluciones</a></li>
+        <li><a href="about.html" data-i18n="nav.about">Nosotros</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="lang-toggle" role="group" aria-label="Language selector">
+          <button class="lang-btn active" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="nav.cta">Contáctenos</a>
+        <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <nav class="nav-mobile" id="mobile-menu" aria-label="Mobile navigation">
+    <button class="nav-mobile-close" style="position:absolute;top:24px;right:24px;font-size:1.5rem;color:rgba(255,255,255,.7);background:none;border:none;cursor:pointer;" aria-label="Close menu">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <a href="index.html" data-i18n="nav.home">Inicio</a>
+    <a href="services.html" data-i18n="nav.services">Servicios</a>
+    <a href="solutions.html" data-i18n="nav.solutions">Soluciones</a>
+    <a href="about.html" data-i18n="nav.about">Nosotros</a>
+    <a href="contact.html" data-i18n="nav.contact">Contacto</a>
+    <div class="nav-mobile-footer">
+      <a href="https://wa.me/18097031161" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      </a>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" aria-label="Hero section">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="container hero-content">
+
+      <!-- Left -->
+      <div class="hero-left">
+        <div class="hero-eyebrow">
+          <em>Empresa Dominicana</em> &nbsp;·&nbsp; Software &amp; Consultoría Tecnológica
+        </div>
+
+        <h1 class="hero-title" data-i18n-html="hero.title">
+          Tecnología que <span>impulsa</span> el crecimiento de su empresa
+        </h1>
+
+        <p class="hero-subtitle" data-i18n="hero.subtitle">
+          Soluciones de software empresarial, automatización de procesos y consultoría tecnológica para llevar su negocio al siguiente nivel.
+        </p>
+
+        <div class="hero-cta">
+          <a href="contact.html" class="btn btn-primary btn-lg" data-i18n="hero.cta1">
+            Nuestros Servicios
+          </a>
+          <a href="https://wa.me/18097031161" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i> <span data-i18n="hero.cta2">WhatsApp</span>
+          </a>
+        </div>
+
+        <div class="hero-stats-divider"></div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-value" data-target="18" data-suffix="+">18+</span>
+            <span class="hero-stat-label" data-i18n="hero.stat1.l">Años de Experiencia</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value" data-target="100" data-suffix="+">100+</span>
+            <span class="hero-stat-label" data-i18n="hero.stat2.l">Proyectos Entregados</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value" data-target="50" data-suffix="+">50+</span>
+            <span class="hero-stat-label" data-i18n="hero.stat3.l">Empresas Atendidas</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Dashboard Widget (refined) -->
+      <div class="hero-right" aria-hidden="true">
+        <div class="dashboard-widget">
+          <div class="dw-header">
+            <div class="dw-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="dw-title" data-i18n="dw.title">Panel de Control</span>
+            <span class="dw-badge" data-i18n="dw.live">En Vivo</span>
+          </div>
+
+          <div class="dw-metrics">
+            <div class="dw-metric">
+              <div class="dw-metric-label" data-i18n="dw.revenue">Ingresos</div>
+              <div class="dw-metric-value">$2.4M</div>
+              <div class="dw-metric-change up"><i class="fa-solid fa-arrow-trend-up"></i> +12%</div>
+            </div>
+            <div class="dw-metric">
+              <div class="dw-metric-label" data-i18n="dw.users">Usuarios</div>
+              <div class="dw-metric-value">1,247</div>
+              <div class="dw-metric-change up"><i class="fa-solid fa-arrow-trend-up"></i> +8%</div>
+            </div>
+            <div class="dw-metric">
+              <div class="dw-metric-label" data-i18n="dw.efficiency">Eficiencia</div>
+              <div class="dw-metric-value">94%</div>
+              <div class="dw-metric-change up"><i class="fa-solid fa-arrow-trend-up"></i> +3%</div>
+            </div>
+          </div>
+
+          <div class="dw-chart">
+            <div class="dw-chart-title" data-i18n="dw.trend">Tendencia de Crecimiento</div>
+            <svg viewBox="0 0 440 90" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#2196F3" stop-opacity="0.5"/>
+                  <stop offset="100%" stop-color="#2196F3" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path class="dw-chart-fill"
+                d="M0 90 L0 65 C40 55, 80 48, 120 40 C160 32, 200 50, 240 36 C280 22, 320 20, 360 8 C390 0, 420 12, 440 6 L440 90 Z"/>
+              <path class="dw-line-path"
+                d="M0 65 C40 55, 80 48, 120 40 C160 32, 200 50, 240 36 C280 22, 320 20, 360 8 C390 0, 420 12, 440 6"/>
+            </svg>
+          </div>
+
+          <div class="dw-footer">
+            <div class="dw-status">
+              <div class="dw-pulse"></div>
+              <span data-i18n="dw.system">Sistemas Activos</span>
+            </div>
+            <div class="dw-timestamp" data-i18n="dw.updated">Actualizado ahora</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TRUST BAR
+       ============================================================ -->
+  <section class="section--sm" style="background:#fff;">
+    <div class="container">
+      <div class="trust-bar">
+        <div class="trust-item reveal"><i class="fa-solid fa-shield-check"></i> <span data-i18n="trust1">DGII Compliance</span></div>
+        <div class="trust-item reveal reveal-delay-1"><i class="fa-solid fa-headset"></i> <span data-i18n="trust2">Soporte en Español</span></div>
+        <div class="trust-item reveal reveal-delay-2"><i class="fa-solid fa-flag"></i> <span data-i18n="trust3">Empresa Dominicana</span></div>
+        <div class="trust-item reveal reveal-delay-3"><i class="fa-solid fa-circle-nodes"></i> <span data-i18n="trust4">Metodología ITIL</span></div>
+        <div class="trust-item reveal reveal-delay-4"><i class="fa-brands fa-atlassian"></i> <span data-i18n="trust5">Plataformas Atlassian</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       COMPANY INTRO
+       ============================================================ -->
+  <section class="section section--bg">
+    <div class="container">
+      <div class="intro-split">
+
+        <!-- Left: Text + highlight -->
+        <div class="reveal-left">
+          <span class="section-label" data-i18n="intro.label">Quiénes somos</span>
+          <h2 class="section-title" data-i18n="intro.title">Soluciones tecnológicas integrales para el mercado dominicano</h2>
+          <p style="margin-bottom:0; line-height:1.8;" data-i18n="intro.text">
+            System Shop Solutions 3S es una empresa dominicana especializada en el diseño, desarrollo e implementación de soluciones tecnológicas empresariales. Con más de 18 años de experiencia, ofrecemos sistemas multiusuario y multi-empresa que se adaptan al crecimiento de su negocio.
+          </p>
+
+          <div class="intro-highlight">
+            <i class="fa-solid fa-flag"></i>
+            <p>Empresa 100% dominicana. Más de 18 años transformando negocios con tecnología de clase mundial.</p>
+          </div>
+
+          <div style="display:flex; gap:14px; flex-wrap:wrap; margin-top:32px;">
+            <a href="about.html" class="btn btn-outline-dark" data-i18n="nav.about">Nosotros</a>
+            <a href="contact.html" class="btn btn-primary" data-i18n="nav.cta">Contáctenos</a>
+          </div>
+        </div>
+
+        <!-- Right: Feature rows -->
+        <div class="intro-feature-rows reveal-right">
+          <div class="intro-feature-row">
+            <div class="feature-icon"><i class="fa-solid fa-award"></i></div>
+            <div>
+              <h3 data-i18n="feat1.title">Experiencia Comprobada</h3>
+              <p data-i18n="feat1.text">Más de 18 años desarrollando e implementando soluciones tecnológicas en el mercado dominicano.</p>
+            </div>
+          </div>
+          <div class="intro-feature-row">
+            <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+            <div>
+              <h3 data-i18n="feat2.title">Soporte Continuo</h3>
+              <p data-i18n="feat2.text">Acompañamiento permanente a nuestros clientes con soporte técnico especializado y gestión proactiva.</p>
+            </div>
+          </div>
+          <div class="intro-feature-row">
+            <div class="feature-icon"><i class="fa-solid fa-gears"></i></div>
+            <div>
+              <h3 data-i18n="feat3.title">Automatización Inteligente</h3>
+              <p data-i18n="feat3.text">Automatizamos sus procesos de negocio para reducir costos, minimizar errores y aumentar la productividad.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICES PREVIEW
+       ============================================================ -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label" data-i18n="srv.label">Lo que hacemos</span>
+        <h2 class="section-title" data-i18n="srv.title">Servicios especializados para su empresa</h2>
+        <p class="section-subtitle" data-i18n="srv.subtitle">Ofrecemos un portafolio completo de servicios tecnológicos diseñados para transformar y potenciar su negocio.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+          <h3 data-i18n="srv1.title">Desarrollo de Software</h3>
+          <p data-i18n="srv1.text">Desarrollamos soluciones de software a medida que se ajustan perfectamente a los procesos y necesidades de su empresa.</p>
+          <a href="services.html" class="card-link" data-i18n="srv.viewall">Ver más <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
+          <h3 data-i18n="srv2.title">Automatización de Procesos</h3>
+          <p data-i18n="srv2.text">Implementamos flujos de trabajo automatizados con Power Platform para eliminar tareas repetitivas y ganar eficiencia.</p>
+          <a href="services.html" class="card-link">Ver más <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal reveal-delay-3">
+          <div class="service-icon"><i class="fa-solid fa-server"></i></div>
+          <h3 data-i18n="srv3.title">Gestión de TI (ITSM)</h3>
+          <p data-i18n="srv3.text">Administramos su infraestructura tecnológica con marcos ITIL y herramientas como Jira Service Management.</p>
+          <a href="services.html" class="card-link">Ver más <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-icon"><i class="fa-brands fa-atlassian"></i></div>
+          <h3 data-i18n="srv4.title">Plataformas Empresariales</h3>
+          <p data-i18n="srv4.text">Implementamos y administramos plataformas como Atlassian, bases de datos Oracle y SQL Server.</p>
+          <a href="services.html" class="card-link">Ver más <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+          <h3 data-i18n="srv5.title">Consultoría Tecnológica</h3>
+          <p data-i18n="srv5.text">Asesoramos a su empresa en la definición de estrategias tecnológicas que impulsen el crecimiento y la eficiencia.</p>
+          <a href="services.html" class="card-link">Ver más <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal reveal-delay-3">
+          <div class="service-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+          <h3 data-i18n="srv6.title">Capacitación y Talleres</h3>
+          <p data-i18n="srv6.text">Capacitamos a su equipo con formación especializada en herramientas tecnológicas y metodologías modernas.</p>
+          <a href="services.html" class="card-link">Ver más <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top:48px;">
+        <a href="services.html" class="btn btn-outline-dark" data-i18n="srv.viewall">Ver todos los servicios <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SOLUTIONS PREVIEW
+       ============================================================ -->
+  <section class="section section--bg">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label" data-i18n="sol.label">Nuestras soluciones</span>
+        <h2 class="section-title" data-i18n="sol.title">Sistemas listos para el mercado dominicano</h2>
+        <p class="section-subtitle" data-i18n="sol.subtitle">Soluciones funcionales, comprobadas y adaptadas a las necesidades reales del sector empresarial dominicano.</p>
+      </div>
+
+      <div class="solutions-grid">
+        <div class="solution-card reveal reveal-delay-1">
+          <div class="solution-icon" style="background:#E3F2FD;color:#1565C0;">
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+          </div>
+          <span class="solution-tag tag tag-blue" data-i18n="trust1">DGII Compliance</span>
+          <h3 data-i18n="sol1.title">Facturación Electrónica</h3>
+          <p data-i18n="sol1.text">Sistema DGII-compliant para emisión de comprobantes fiscales electrónicos (e-CF).</p>
+        </div>
+        <div class="solution-card reveal reveal-delay-2">
+          <div class="solution-icon" style="background:#E8F5E9;color:#2E7D32;">
+            <i class="fa-solid fa-cash-register"></i>
+          </div>
+          <span class="solution-tag tag tag-green">POS</span>
+          <h3 data-i18n="sol2.title">Punto de Venta (POS)</h3>
+          <p data-i18n="sol2.text">POS para tiendas, restaurantes, colmados y negocios en general, con control de inventario.</p>
+        </div>
+        <div class="solution-card reveal reveal-delay-3">
+          <div class="solution-icon" style="background:#FFF3E0;color:#E65100;">
+            <i class="fa-solid fa-scale-balanced"></i>
+          </div>
+          <span class="solution-tag tag tag-orange">Contabilidad</span>
+          <h3 data-i18n="sol3.title">Sistema Contable</h3>
+          <p data-i18n="sol3.text">Contabilidad completa con estados financieros, cuentas por cobrar y pagar, y reportes ejecutivos.</p>
+        </div>
+        <div class="solution-card reveal reveal-delay-1">
+          <div class="solution-icon" style="background:#F3E5F5;color:#7B1FA2;">
+            <i class="fa-solid fa-boxes-stacked"></i>
+          </div>
+          <span class="solution-tag tag tag-purple">Inventario</span>
+          <h3 data-i18n="sol4.title">Control de Inventario</h3>
+          <p data-i18n="sol4.text">Gestión eficiente de almacenes, entradas, salidas, tomas físicas y alertas de stock.</p>
+        </div>
+        <div class="solution-card reveal reveal-delay-2">
+          <div class="solution-icon" style="background:#E3F2FD;color:#1565C0;">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <span class="solution-tag tag tag-blue">RRHH</span>
+          <h3 data-i18n="sol5.title">Recursos Humanos</h3>
+          <p data-i18n="sol5.text">Nómina, asistencia, control de empleados y gestión de vacaciones y beneficios.</p>
+        </div>
+        <div class="solution-card reveal reveal-delay-3">
+          <div class="solution-icon" style="background:#E8F5E9;color:#2E7D32;">
+            <i class="fa-solid fa-school"></i>
+          </div>
+          <span class="solution-tag tag tag-green">Educación</span>
+          <h3 data-i18n="sol6.title">Sistema Escolar</h3>
+          <p data-i18n="sol6.text">Plataforma integral para gestión académica, calificaciones, matrícula y comunicación escolar.</p>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top:48px;">
+        <a href="solutions.html" class="btn btn-primary" data-i18n="sol.viewall">Ver todas las soluciones <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EXECUTIVE METRICS
+       ============================================================ -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label section-label--light" data-i18n="met.label">Nuestros números</span>
+        <h2 class="section-title" style="color:white;" data-i18n="met.title">Una empresa con trayectoria y resultados</h2>
+        <p class="section-subtitle section-subtitle--light" data-i18n="met.sub">Métricas que reflejan nuestra experiencia, capacidad y compromiso con el crecimiento de su negocio.</p>
+      </div>
+
+      <div class="metrics-grid">
+        <div class="metric-card reveal reveal-delay-1">
+          <div class="metric-icon"><i class="fa-solid fa-calendar-check"></i></div>
+          <div class="metric-value" data-target="18" data-suffix="+" data-i18n="met1.v">18+</div>
+          <div class="metric-label" data-i18n="met1.l">Años de Experiencia</div>
+        </div>
+        <div class="metric-card reveal reveal-delay-2">
+          <div class="metric-icon"><i class="fa-solid fa-building-columns"></i></div>
+          <div class="metric-value" data-i18n="met2.v">Multi</div>
+          <div class="metric-label" data-i18n="met2.l">Empresa &amp; Multiusuario</div>
+        </div>
+        <div class="metric-card reveal reveal-delay-3">
+          <div class="metric-icon"><i class="fa-solid fa-rocket"></i></div>
+          <div class="metric-value" data-target="100" data-suffix="+" data-i18n="met3.v">100+</div>
+          <div class="metric-label" data-i18n="met3.l">Proyectos Implementados</div>
+        </div>
+        <div class="metric-card reveal reveal-delay-4">
+          <div class="metric-icon"><i class="fa-solid fa-headset"></i></div>
+          <div class="metric-value" data-i18n="met4.v">24/7</div>
+          <div class="metric-label" data-i18n="met4.l">Soporte Disponible</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TEAM PREVIEW
+       ============================================================ -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label" data-i18n="team.label">Nuestro equipo</span>
+        <h2 class="section-title" data-i18n="team.title">Los profesionales detrás de 3S</h2>
+        <p class="section-subtitle" data-i18n="team.sub">Un equipo comprometido con la excelencia tecnológica y el crecimiento de nuestros clientes.</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card reveal reveal-delay-1">
+          <div class="team-avatar">RF</div>
+          <h3>Ramón Feliz</h3>
+          <div class="team-role" data-i18n="team1.role">Gerente General</div>
+          <p data-i18n="team1.bio">Líder visionario con más de 18 años impulsando el crecimiento tecnológico empresarial.</p>
+        </div>
+        <div class="team-card reveal reveal-delay-2">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#1565C0 0%,#0D47A1 100%)">RaF</div>
+          <h3>Ranyel Feliz</h3>
+          <div class="team-role" data-i18n="team2.role">Director de Operaciones</div>
+          <p data-i18n="team2.bio">Experto en optimización de procesos y gestión operativa de proyectos tecnológicos.</p>
+        </div>
+        <div class="team-card reveal reveal-delay-3">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#0D47A1 0%,#1A237E 100%)">RdF</div>
+          <h3>Randdy Feliz</h3>
+          <div class="team-role" data-i18n="team3.role">Director de Tecnología</div>
+          <p data-i18n="team3.bio">Arquitecto de soluciones tecnológicas con profundo dominio en desarrollo e infraestructura.</p>
+        </div>
+        <div class="team-card reveal reveal-delay-4">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#1565C0 0%,#2196F3 100%)">AF</div>
+          <h3>Arnold Feliz</h3>
+          <div class="team-role" data-i18n="team4.role">Director de Negocios y Servicios</div>
+          <p data-i18n="team4.bio">Estratega de negocios y servicios con enfoque en el crecimiento comercial, gestión de clientes y desarrollo de oportunidades.</p>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top:48px;">
+        <a href="about.html" class="btn btn-outline-dark" data-i18n="nav.about">Conocer al equipo <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA — PREMIUM
+       ============================================================ -->
+  <section class="section--cta-premium">
+    <div class="container">
+      <div class="cta-premium-inner">
+        <div class="cta-premium-text reveal-left">
+          <span class="section-label" data-i18n="cta.label">El siguiente paso</span>
+          <h2 data-i18n="cta.title">Su visión. Nuestra tecnología.</h2>
+          <p data-i18n="cta.text">Cuéntenos sobre su empresa y sus objetivos. Diseñamos la solución tecnológica exacta que necesita para crecer, automatizar y competir.</p>
+        </div>
+        <div class="cta-premium-actions reveal-right">
+          <a href="https://wa.me/18097031161?text=Hola,%20me%20gustar%C3%ADa%20conocer%20sus%20soluciones%20tecnol%C3%B3gicas."
+             class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener" data-i18n="cta.btn1">
+            <i class="fa-brands fa-whatsapp"></i> Iniciar conversación
+          </a>
+          <a href="services.html" class="btn btn-outline btn-lg" data-i18n="cta.btn2">
+            Ver servicios
+          </a>
+          <a href="contact.html" class="btn btn-outline btn-lg" data-i18n="nav.contact">
+            Contacto
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <div class="nav-logo" style="margin-bottom:0;">
+            <div class="logo-mark">3S</div>
+            <div class="logo-text">
+              <span class="logo-name">System Shop Solutions</span>
+              <span class="logo-tag">Technology Company</span>
+            </div>
+          </div>
+          <p class="footer-desc" data-i18n="footer.desc">
+            Empresa dominicana especializada en soluciones tecnológicas empresariales con más de 18 años de experiencia transformando negocios.
+          </p>
+          <div class="footer-socials">
+            <a href="https://wa.me/18097031161" class="footer-social" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="mailto:randdyfeliz@hotmail.com" class="footer-social" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Nav -->
+        <div class="footer-col">
+          <h4 data-i18n="footer.nav">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+            <li><a href="services.html" data-i18n="nav.services">Servicios</a></li>
+            <li><a href="solutions.html" data-i18n="nav.solutions">Soluciones</a></li>
+            <li><a href="about.html" data-i18n="nav.about">Nosotros</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-col">
+          <h4 data-i18n="footer.services">Servicios</h4>
+          <ul class="footer-links">
+            <li><a href="services.html" data-i18n="footer.srv1">Desarrollo de Software</a></li>
+            <li><a href="services.html" data-i18n="footer.srv2">Automatización</a></li>
+            <li><a href="services.html" data-i18n="footer.srv3">Gestión de TI</a></li>
+            <li><a href="services.html" data-i18n="footer.srv4">Consultoría</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h4 data-i18n="footer.contact">Contacto</h4>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>+1 809 703 1161</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>+1 809 219 2667</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>randdyfeliz@hotmail.com</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>República Dominicana</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy" data-i18n="footer.copy">© 2024 System Shop Solutions 3S. Todos los derechos reservados.</p>
+        <div class="footer-legal">
+          <a href="#" data-i18n="footer.privacy">Privacidad</a>
+          <a href="#" data-i18n="footer.terms">Términos</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
