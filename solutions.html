@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="System Shop Solutions 3S — Sistemas empresariales para el mercado dominicano: facturación electrónica, POS, contabilidad, inventario, RRHH, sistema escolar y más." />
+  <title>Soluciones | System Shop Solutions 3S</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    .solution-card-full {
+      background: var(--c-white);
+      border: 1px solid var(--c-border);
+      border-radius: var(--r-l);
+      padding: 40px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 32px;
+      align-items: start;
+      transition: var(--t);
+      margin-bottom: 24px;
+    }
+    .solution-card-full:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--sh-lg);
+      border-color: var(--c-accent);
+    }
+    .solution-card-full .solution-icon {
+      width: 72px; height: 72px;
+      font-size: 1.75rem;
+      border-radius: var(--r-m);
+      flex-shrink: 0;
+    }
+    .solution-card-full h3 { font-size: 1.25rem; margin-bottom: 10px; }
+    .solution-card-full p  { font-size: .95rem; margin-bottom: 16px; }
+    .solution-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .solution-feature {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .8rem;
+      font-weight: 500;
+      color: var(--c-body);
+    }
+    .solution-feature i { color: var(--c-accent); font-size: .75rem; }
+    @media (max-width: 640px) {
+      .solution-card-full { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar white" role="navigation">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-mark">3S</div>
+        <div class="logo-text">
+          <span class="logo-name">System Shop Solutions</span>
+          <span class="logo-tag">Technology Company</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+        <li><a href="services.html" data-i18n="nav.services">Servicios</a></li>
+        <li><a href="solutions.html" data-i18n="nav.solutions">Soluciones</a></li>
+        <li><a href="about.html" data-i18n="nav.about">Nosotros</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="nav.cta">Contáctenos</a>
+        <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="nav-mobile" id="mobile-menu">
+    <button class="nav-mobile-close" style="position:absolute;top:24px;right:24px;font-size:1.5rem;color:rgba(255,255,255,.7);background:none;border:none;cursor:pointer;">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <a href="index.html" data-i18n="nav.home">Inicio</a>
+    <a href="services.html" data-i18n="nav.services">Servicios</a>
+    <a href="solutions.html" data-i18n="nav.solutions">Soluciones</a>
+    <a href="about.html" data-i18n="nav.about">Nosotros</a>
+    <a href="contact.html" data-i18n="nav.contact">Contacto</a>
+    <div class="nav-mobile-footer">
+      <a href="https://wa.me/18097031161" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      </a>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero-content">
+      <span class="section-label section-label--light" data-i18n="nav.solutions">Soluciones</span>
+      <h1 data-i18n="sol.page.title">Nuestras Soluciones</h1>
+      <p data-i18n="sol.page.sub">Sistemas empresariales desarrollados y adaptados para las necesidades reales del mercado dominicano.</p>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section--sm" style="background:#fff;">
+    <div class="container">
+      <div class="text-center" style="max-width:700px;margin:0 auto;padding:40px 0;">
+        <p style="font-size:1.1rem;line-height:1.8;" data-i18n="sol.intro">
+          Desarrollamos sistemas completos, robustos y fáciles de usar que abordan los retos más importantes del empresario dominicano: control, automatización, visibilidad y cumplimiento.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTIONS LIST -->
+  <section class="section section--bg">
+    <div class="container">
+
+      <!-- Facturación Electrónica -->
+      <div class="solution-card-full reveal">
+        <div class="solution-icon" style="background:#E3F2FD;color:#1565C0;display:flex;align-items:center;justify-content:center;">
+          <i class="fa-solid fa-file-invoice-dollar"></i>
+        </div>
+        <div>
+          <span class="solution-tag tag tag-blue" style="margin-bottom:12px;display:inline-block;" data-i18n="trust1">DGII Compliance</span>
+          <h3 data-i18n="sol1.title">Facturación Electrónica</h3>
+          <p data-i18n="sol1.text">Sistema DGII-compliant para emisión de comprobantes fiscales electrónicos (e-CF).</p>
+          <div class="solution-features">
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Emisión de e-CF</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Integración DGII</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Tipos de NCF</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Reportes 606/607</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Multi-empresa</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Historial completo</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- POS -->
+      <div class="solution-card-full reveal">
+        <div class="solution-icon" style="background:#E8F5E9;color:#2E7D32;display:flex;align-items:center;justify-content:center;">
+          <i class="fa-solid fa-cash-register"></i>
+        </div>
+        <div>
+          <span class="solution-tag tag tag-green" style="margin-bottom:12px;display:inline-block;">Comercio</span>
+          <h3 data-i18n="sol2.title">Punto de Venta (POS)</h3>
+          <p data-i18n="sol2.text">POS para tiendas, restaurantes, colmados y negocios en general, con control de inventario.</p>
+          <div class="solution-features">
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Ventas rápidas</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Control de inventario</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Múltiples pagos</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Gestión de mesas</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Reportes de ventas</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Múltiples cajas</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Impresión de tickets</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Integrado con e-CF</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contabilidad -->
+      <div class="solution-card-full reveal">
+        <div class="solution-icon" style="background:#FFF3E0;color:#E65100;display:flex;align-items:center;justify-content:center;">
+          <i class="fa-solid fa-scale-balanced"></i>
+        </div>
+        <div>
+          <span class="solution-tag tag tag-orange" style="margin-bottom:12px;display:inline-block;">Finanzas</span>
+          <h3 data-i18n="sol3.title">Sistema Contable</h3>
+          <p data-i18n="sol3.text">Contabilidad completa con estados financieros, cuentas por cobrar y pagar, y reportes ejecutivos.</p>
+          <div class="solution-features">
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Plan de cuentas</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Diario y mayor</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Balance general</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Estado de resultados</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> CxC / CxP</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Conciliación bancaria</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Multi-empresa</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Reportes fiscales DGII</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inventario -->
+      <div class="solution-card-full reveal">
+        <div class="solution-icon" style="background:#F3E5F5;color:#7B1FA2;display:flex;align-items:center;justify-content:center;">
+          <i class="fa-solid fa-boxes-stacked"></i>
+        </div>
+        <div>
+          <span class="solution-tag tag tag-purple" style="margin-bottom:12px;display:inline-block;">Almacén</span>
+          <h3 data-i18n="sol4.title">Control de Inventario</h3>
+          <p data-i18n="sol4.text">Gestión eficiente de almacenes, entradas, salidas, tomas físicas y alertas de stock.</p>
+          <div class="solution-features">
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Entradas y salidas</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Múltiples almacenes</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Toma física</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Alertas de stock</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Transferencias</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Lotes y series</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Códigos de barra</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Reportes de costos</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RRHH -->
+      <div class="solution-card-full reveal">
+        <div class="solution-icon" style="background:#E3F2FD;color:#1565C0;display:flex;align-items:center;justify-content:center;">
+          <i class="fa-solid fa-users"></i>
+        </div>
+        <div>
+          <span class="solution-tag tag tag-blue" style="margin-bottom:12px;display:inline-block;">RRHH</span>
+          <h3 data-i18n="sol5.title">Recursos Humanos</h3>
+          <p data-i18n="sol5.text">Nómina, asistencia, control de empleados y gestión de vacaciones y beneficios.</p>
+          <div class="solution-features">
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Nómina completa</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Control de asistencia</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Expediente digital</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Gestión de vacaciones</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Préstamos y descuentos</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> TSS / AFP / SFS</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Reportes del Ministerio</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Carta de trabajo</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sistema Escolar -->
+      <div class="solution-card-full reveal">
+        <div class="solution-icon" style="background:#E8F5E9;color:#2E7D32;display:flex;align-items:center;justify-content:center;">
+          <i class="fa-solid fa-school"></i>
+        </div>
+        <div>
+          <span class="solution-tag tag tag-green" style="margin-bottom:12px;display:inline-block;">Educación</span>
+          <h3 data-i18n="sol6.title">Sistema Escolar</h3>
+          <p data-i18n="sol6.text">Plataforma integral para gestión académica, calificaciones, matrícula y comunicación escolar.</p>
+          <div class="solution-features">
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Matrícula y secciones</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Calificaciones</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Asistencia</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Boletines</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Gestión de maestros</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Portal para padres</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Pagos y recibos</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Reportes MINERD</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboards -->
+      <div class="solution-card-full reveal">
+        <div class="solution-icon" style="background:#E3F2FD;color:#1565C0;display:flex;align-items:center;justify-content:center;">
+          <i class="fa-solid fa-chart-line"></i>
+        </div>
+        <div>
+          <span class="solution-tag tag tag-blue" style="margin-bottom:12px;display:inline-block;">Business Intelligence</span>
+          <h3>Dashboards y Reportería Ejecutiva</h3>
+          <p>Paneles de control gerenciales con métricas clave de negocio en tiempo real. Tome decisiones informadas basadas en datos concretos de su operación.</p>
+          <div class="solution-features">
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> KPIs en tiempo real</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Gráficos interactivos</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Alertas automáticas</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Power BI integrado</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Acceso por roles</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Exportación Excel/PDF</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Transformación Digital -->
+      <div class="solution-card-full reveal">
+        <div class="solution-icon" style="background:#FFF3E0;color:#E65100;display:flex;align-items:center;justify-content:center;">
+          <i class="fa-solid fa-arrows-rotate"></i>
+        </div>
+        <div>
+          <span class="solution-tag tag tag-orange" style="margin-bottom:12px;display:inline-block;">Estrategia</span>
+          <h3>Transformación Digital Empresarial</h3>
+          <p>Acompañamos a su empresa en el camino hacia la digitalización total: desde el diagnóstico de sus procesos actuales hasta la implementación completa de su ecosistema tecnológico.</p>
+          <div class="solution-features">
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Diagnóstico digital</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Hoja de ruta tecnológica</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Automatización de flujos</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Gestión del cambio</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Capacitación del equipo</span>
+            <span class="solution-feature"><i class="fa-solid fa-check"></i> Soporte post-implementación</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section--cta-premium">
+    <div class="container">
+      <div class="cta-premium-inner">
+        <div class="cta-premium-text reveal-left">
+          <span class="section-label" data-i18n="cta.label">El siguiente paso</span>
+          <h2 data-i18n="cta.title">Su visión. Nuestra tecnología.</h2>
+          <p data-i18n="cta.text">Cuéntenos sobre su empresa y sus objetivos. Diseñamos la solución tecnológica exacta que necesita para crecer, automatizar y competir.</p>
+        </div>
+        <div class="cta-premium-actions reveal-right">
+          <a href="https://wa.me/18097031161?text=Hola,%20me%20gustar%C3%ADa%20conocer%20sus%20soluciones."
+             class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener" data-i18n="cta.btn1">
+            <i class="fa-brands fa-whatsapp"></i> Iniciar conversación
+          </a>
+          <a href="contact.html" class="btn btn-outline btn-lg" data-i18n="nav.contact">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo" style="margin-bottom:0;">
+            <div class="logo-mark">3S</div>
+            <div class="logo-text">
+              <span class="logo-name">System Shop Solutions</span>
+              <span class="logo-tag">Technology Company</span>
+            </div>
+          </div>
+          <p class="footer-desc" data-i18n="footer.desc">Empresa dominicana especializada en soluciones tecnológicas empresariales con más de 18 años de experiencia.</p>
+          <div class="footer-socials">
+            <a href="https://wa.me/18097031161" class="footer-social" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:randdyfeliz@hotmail.com" class="footer-social"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.nav">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+            <li><a href="services.html" data-i18n="nav.services">Servicios</a></li>
+            <li><a href="solutions.html" data-i18n="nav.solutions">Soluciones</a></li>
+            <li><a href="about.html" data-i18n="nav.about">Nosotros</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.services">Servicios</h4>
+          <ul class="footer-links">
+            <li><a href="services.html" data-i18n="footer.srv1">Desarrollo de Software</a></li>
+            <li><a href="services.html" data-i18n="footer.srv2">Automatización</a></li>
+            <li><a href="services.html" data-i18n="footer.srv3">Gestión de TI</a></li>
+            <li><a href="services.html" data-i18n="footer.srv4">Consultoría</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.contact">Contacto</h4>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item"><i class="fa-brands fa-whatsapp"></i><span>+1 809 703 1161</span></div>
+            <div class="footer-contact-item"><i class="fa-brands fa-whatsapp"></i><span>+1 809 219 2667</span></div>
+            <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>randdyfeliz@hotmail.com</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy" data-i18n="footer.copy">© 2024 System Shop Solutions 3S. Todos los derechos reservados.</p>
+        <div class="footer-legal">
+          <a href="#" data-i18n="footer.privacy">Privacidad</a>
+          <a href="#" data-i18n="footer.terms">Términos</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
