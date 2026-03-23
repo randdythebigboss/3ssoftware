@@ -180,129 +180,24 @@
   }
 
   /* ============================================================
-     EMAILJS CONFIGURATION
+     CONTACT FORM — Formspree (static site / GitHub Pages)
      ============================================================
-     Setup steps (takes ~10 minutes):
-     1. Create free account at https://www.emailjs.com
-     2. Add an Email Service (Gmail, Outlook, SMTP…) → copy the Service ID
-     3. Create Template "notification" (company receives the client inquiry):
-          To Email:  randdyfeliz@hotmail.com
-          CC:        ranyelfeliz@hotmail.com, felizarnold@gmail.com
-          Subject:   Nuevo contacto — {{from_name}} · 3S Website
-          Variables used: {{from_name}}, {{from_email}}, {{company}},
-                          {{phone}}, {{service}}, {{message}}
-     4. Create Template "autoreply" (confirmation sent to the client):
-          To Email: {{to_email}}
-          Subject:  Recibimos su mensaje – System Shop Solutions 3S
-          Variables used: {{to_name}}
-     5. Copy your Public Key: Account → API Keys → Public Key
-     6. Replace the four placeholder strings below with your real values
+     This form uses Formspree to handle submissions from a static
+     site (GitHub Pages). Submission is a normal HTML POST — no
+     JavaScript interception. The spinner is shown on submit for
+     UX feedback; Formspree then redirects to the _next URL.
      ============================================================ */
-  const EMAILJS_CONFIG = {
-    publicKey:       'YOUR_PUBLIC_KEY',          // Account > API Keys
-    serviceId:       'YOUR_SERVICE_ID',          // Email Services tab
-    templateId:      'YOUR_TEMPLATE_ID',         // Notification template
-    templateIdReply: 'YOUR_AUTOREPLY_TEMPLATE'   // Auto-reply template
-  };
-
-  /* ============================================================
-     CONTACT FORM — VALIDATION + EMAIL DELIVERY (EmailJS)
-     ============================================================ */
-  const contactForm = document.querySelector('#contact-form');
+  const contactForm = document.querySelector('#contactForm');
   if (contactForm) {
 
-    // Initialize EmailJS with the public key (safe to call even on other pages)
-    if (typeof emailjs !== 'undefined') {
-      emailjs.init({ publicKey: EMAILJS_CONFIG.publicKey });
-    }
-
-    contactForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      // ── Client-side validation ──────────────────────────────
-      const nameField  = this.querySelector('#f-name');
-      const emailField = this.querySelector('#f-email');
-      const msgField   = this.querySelector('#f-msg');
-      const required   = [nameField, emailField, msgField];
-      let valid = true;
-
-      required.forEach(field => {
-        if (!field.value.trim()) {
-          field.style.borderColor = '#EF5350';
-          valid = false;
-        } else {
-          field.style.borderColor = '';
-        }
-      });
-      if (!valid) return;
-
-      // ── Spinner state ────────────────────────────────────────
+    contactForm.addEventListener('submit', function () {
+      // Show spinner while the browser POSTs to Formspree
       const submitBtn = this.querySelector('[type="submit"]');
-      const originalBtnHTML = submitBtn.innerHTML;
-      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>&nbsp; Enviando...';
-      submitBtn.disabled = true;
-
-      // ── Build template params ────────────────────────────────
-      const serviceSelect = this.querySelector('#f-service');
-      const serviceLabel  = serviceSelect.options[serviceSelect.selectedIndex]?.text || 'No especificado';
-
-      const notificationParams = {
-        from_name: nameField.value.trim(),
-        from_email: emailField.value.trim(),
-        company:  (this.querySelector('#f-company')?.value.trim()) || 'No especificada',
-        phone:    (this.querySelector('#f-phone')?.value.trim())   || 'No especificado',
-        service:  serviceLabel,
-        message:  msgField.value.trim()
-      };
-
-      const replyParams = {
-        to_name:  nameField.value.trim(),
-        to_email: emailField.value.trim()
-      };
-
-      // ── Send emails ──────────────────────────────────────────
-      if (typeof emailjs === 'undefined') {
-        // EmailJS SDK not loaded — show configuration warning in console
-        console.warn('[3S Contact] EmailJS SDK not available. Make sure the CDN script is loaded and EMAILJS_CONFIG values are set.');
-        showFormError();
-        resetBtn();
-        return;
+      if (submitBtn) {
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>&nbsp; Enviando...';
+        submitBtn.disabled = true;
       }
-
-      emailjs.send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, notificationParams)
-        .then(() => {
-          // Notification sent — now send auto-reply to client
-          return emailjs.send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateIdReply, replyParams);
-        })
-        .then(() => {
-          showFormSuccess();
-        })
-        .catch(err => {
-          console.error('[3S Contact] EmailJS error:', err);
-          showFormError();
-          resetBtn();
-        });
-
-      function showFormSuccess() {
-        const successEl = document.querySelector('.form-success');
-        if (successEl) {
-          contactForm.style.display = 'none';
-          successEl.style.display = 'block';
-        }
-      }
-
-      function showFormError() {
-        const errorEl = document.querySelector('.form-error');
-        if (errorEl) {
-          contactForm.style.display = 'none';
-          errorEl.style.display = 'block';
-        }
-      }
-
-      function resetBtn() {
-        submitBtn.innerHTML = originalBtnHTML;
-        submitBtn.disabled  = false;
-      }
+      // No e.preventDefault() — form submits normally to Formspree
     });
 
     // Clear validation highlight on input

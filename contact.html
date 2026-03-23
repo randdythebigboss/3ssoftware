@@ -7,8 +7,6 @@
   <title>Contacto | System Shop Solutions 3S</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <!-- EmailJS SDK — Required for contact form email delivery -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -172,27 +170,24 @@
 
             <!--
               ============================================================
-              CONTACT FORM — EmailJS Integration
+              CONTACT FORM — Formspree Integration
               ============================================================
-              Email delivery is handled via EmailJS (emailjs.com).
-              Configuration is in js/main.js → EMAILJS_CONFIG object.
-
-              Setup checklist:
-                1. Create account at https://www.emailjs.com
-                2. Add an Email Service (Gmail, Outlook, SMTP…) → copy Service ID
-                3. Create Template "notification" (company receives inquiry):
-                     To Email: randdyfeliz@hotmail.com (set in template)
-                     CC:       ranyelfeliz@hotmail.com, felizarnold@gmail.com
-                     Variables: {{from_name}}, {{from_email}}, {{company}},
-                                {{phone}}, {{service}}, {{message}}
-                4. Create Template "autoreply" (client confirmation):
-                     To Email: {{to_email}}
-                     Variables: {{to_name}}
-                5. Copy Public Key from Account → API Keys
-                6. Fill EMAILJS_CONFIG values in js/main.js
+              This form uses Formspree to handle submissions from a static
+              site (GitHub Pages). No backend or SDK required.
+              Endpoint: https://formspree.io/f/xeeryepz
+              - On submit, Formspree delivers the email and redirects to _next.
+              - The _gotcha field is a honeypot to block spam bots.
               ============================================================
             -->
-            <form id="contact-form" novalidate>
+            <form
+              id="contactForm"
+              action="https://formspree.io/f/xeeryepz"
+              method="POST"
+            >
+              <!-- Formspree control fields -->
+              <input type="hidden" name="_next" value="https://randdythebigboss.github.io/3ssoftware/">
+              <input type="hidden" name="_subject" value="Nuevo contacto desde 3S Software">
+              <input type="text"   name="_gotcha"  style="display:none" tabindex="-1" autocomplete="off">
               <div class="form-row">
                 <div class="form-group">
                   <label for="f-name" data-i18n="form.name">Nombre Completo</label>
