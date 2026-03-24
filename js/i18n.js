@@ -38,7 +38,8 @@ const translations = {
   /* ---- HOME INTRO ---- */
   "intro.label":    { es: "Quiénes somos", en: "Who We Are" },
   "intro.title":    { es: "Tecnología diseñada para escalar su negocio y acelerar su crecimiento", en: "Technology designed to scale your business and accelerate your growth" },
-  "intro.text":     { es: "Durante más de 18 años hemos acompañado a empresas de todos los tamaños a tomar el control de sus operaciones con tecnología que realmente funciona. No vendemos licencias — construimos soluciones que crecen con su negocio.", en: "For over 18 years we have helped companies of all sizes take control of their operations with technology that actually works. We don't sell licenses — we build solutions that grow with your business." },
+  "intro.text":      { es: "Durante más de 18 años hemos acompañado a empresas de todos los tamaños a tomar el control de sus operaciones con tecnología que realmente funciona. No vendemos licencias — construimos soluciones que crecen con su negocio.", en: "For over 18 years we have helped companies of all sizes take control of their operations with technology that actually works. We don't sell licenses — we build solutions that grow with your business." },
+  "intro.highlight": { es: "Empresa 100% dominicana. Más de 18 años transformando negocios con tecnología de clase mundial.", en: "100% Dominican company. Over 18 years transforming businesses with world-class technology." },
   "feat1.title":    { es: "Experiencia Comprobada", en: "Proven Experience" },
   "feat1.text":     { es: "Más de 18 años desarrollando e implementando soluciones tecnológicas para empresas de todos los tamaños y sectores.", en: "Over 18 years developing and implementing technology solutions for companies of all sizes and sectors." },
   "feat2.title":    { es: "Soporte Continuo", en: "Continuous Support" },
@@ -63,6 +64,7 @@ const translations = {
   "srv6.title":  { es: "Capacitación y Talleres", en: "Training & Workshops" },
   "srv6.text":   { es: "Capacitamos a su equipo con formación especializada en herramientas tecnológicas y metodologías modernas.", en: "We train your team with specialized education in technological tools and modern methodologies." },
   "srv.viewall": { es: "Ver todos los servicios", en: "View all services" },
+  "srv.more":    { es: "Ver más", en: "See more" },
 
   /* ---- HOME SOLUTIONS ---- */
   "sol.label":   { es: "Nuestras soluciones", en: "Our Solutions" },

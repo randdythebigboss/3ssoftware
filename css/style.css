@@ -2083,3 +2083,108 @@ h2.section-title + .section-subtitle {
   .services-grid,
   .solutions-grid { min-width: 0; overflow-wrap: break-word; word-break: break-word; }
 }
+
+/* ============================================================
+   MOBILE REFINEMENT PASS 3 (v6) — Final Polish
+   ============================================================ */
+
+/* A. Hero: use small viewport height so iOS browser chrome is excluded */
+@supports (min-height: 100svh) {
+  @media (max-width: 768px) {
+    .hero { min-height: 100svh; }
+  }
+}
+
+/* B. Hero eyebrow: strip uppercase on mobile to prevent long-line breaks */
+@media (max-width: 768px) {
+  .hero-eyebrow {
+    text-transform: none;
+    letter-spacing: .05em;
+    font-size: .7rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+}
+
+/* C. Hero stats: apply clean 3-col grid at ALL mobile widths, not just ≤480px.
+      The ≤480px block in Pass 2 already does this; extending it to ≤768px fixes
+      the flex+pseudo-divider layout on mid-size phones (375–480px). */
+@media (max-width: 768px) {
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    width: 100%;
+  }
+  .hero-stat {
+    text-align: center;
+    padding: 0 6px;
+  }
+  .hero-stat + .hero-stat::before { display: none; }
+  .hero-stat + .hero-stat { border-left: 1px solid rgba(255,255,255,.1); }
+  .hero-stat-value { font-size: 1.45rem; }
+  .hero-stat-label { font-size: .68rem; letter-spacing: 0; line-height: 1.4; }
+}
+@media (max-width: 480px) {
+  .hero-stat-value { font-size: 1.3rem; }
+  .hero-stat-label { font-size: .6rem; }
+}
+@media (max-width: 360px) {
+  .hero-stat-value { font-size: 1.1rem; }
+  .hero-stat-label { font-size: .55rem; }
+}
+
+/* D. WhatsApp CTA in hero: subtle green tint so it reads as WhatsApp,
+      not just a generic outline button */
+@media (max-width: 768px) {
+  .hero-cta .btn-outline {
+    border-color: rgba(37, 211, 102, .5);
+    color: rgba(255, 255, 255, .95);
+  }
+}
+
+/* E. Section--sm: reduce vertical padding on mobile to a tighter rhythm */
+@media (max-width: 768px) {
+  .section--sm { padding: 48px 0; }
+}
+
+/* F. Intro split: less gap when stacked to single column on mobile */
+@media (max-width: 768px) {
+  .intro-split { gap: 32px; }
+}
+
+/* G. Service icon: tighter margin on small screens for breathing room */
+@media (max-width: 480px) {
+  .service-icon { margin-bottom: 14px; }
+  .metric-icon  { font-size: 1.4rem; margin-bottom: 12px; }
+}
+
+/* H. Team cards: reduce avatar size and card padding on very small screens */
+@media (max-width: 480px) {
+  .team-card   { padding: 24px 16px 20px; }
+  .team-avatar { width: 80px; height: 80px; font-size: 1.5rem; margin-bottom: 14px; }
+  .team-card h3 { font-size: .95rem; }
+  .team-role   { font-size: .775rem; }
+}
+
+/* I. Logo name: prevent overflow in the 371–414px gap
+      (text fully hidden below 370px, normal above 415px) */
+@media (max-width: 414px) and (min-width: 371px) {
+  .logo-name {
+    max-width: 110px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/* J. Nav right: tighter gap on very narrow screens */
+@media (max-width: 380px) {
+  .nav-right { gap: 6px; }
+  .lang-btn  { padding: 4px 8px; }
+}
+
+/* K. About visual stats: scale down value text on small screens */
+@media (max-width: 480px) {
+  .about-visual-stat .value { font-size: 1.8rem; }
+}
