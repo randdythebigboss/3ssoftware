@@ -171,17 +171,59 @@
           </div>
         </div>
         <div class="services-grid" style="grid-template-columns: repeat(2,1fr);">
-          <div class="service-card reveal reveal-delay-1">
-            <div class="service-icon" style="background:#deebff;color:#0052cc;">
-              <i class="fa-brands fa-atlassian"></i>
+          <div class="service-card reveal reveal-delay-1" style="grid-column: 1 / -1;">
+            <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+              <div class="service-icon" style="background:#deebff;color:#0052cc;flex-shrink:0;">
+                <i class="fa-brands fa-atlassian"></i>
+              </div>
+              <div>
+                <h3 data-i18n="srv.g4.1.t" style="margin-bottom:4px;">Atlassian Solutions</h3>
+                <p style="font-size:.85rem;color:var(--c-muted);margin:0;" data-i18n="srv.g4.1.d">Implementamos y administramos el ecosistema Atlassian completo para centralizar operaciones, proyectos y soporte.</p>
+              </div>
             </div>
-            <h3 data-i18n="srv.g4.1.t">Atlassian (Jira, Confluence, Assets)</h3>
-            <p data-i18n="srv.g4.1.d">Implementamos, configuramos y administramos el ecosistema Atlassian completo: Jira Software, Jira Service Management, Confluence y Assets para centralizar la gestión de su empresa.</p>
-            <div style="margin-top:16px; display:flex; flex-wrap:wrap; gap:8px;">
-              <span class="tag tag-blue">Jira Software</span>
-              <span class="tag tag-blue">Jira SM</span>
-              <span class="tag tag-blue">Confluence</span>
-              <span class="tag tag-blue">Assets</span>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px;">
+              <div style="padding:16px;background:var(--c-bg);border-radius:var(--r-s);display:flex;gap:12px;align-items:flex-start;">
+                <i class="fa-brands fa-jira" style="color:#0052cc;font-size:1.1rem;margin-top:2px;flex-shrink:0;"></i>
+                <div>
+                  <div style="font-size:.875rem;font-weight:600;color:var(--c-text);margin-bottom:2px;">Jira Service Management</div>
+                  <div style="font-size:.78rem;color:var(--c-muted);">ITSM · Incidentes · Solicitudes</div>
+                </div>
+              </div>
+              <div style="padding:16px;background:var(--c-bg);border-radius:var(--r-s);display:flex;gap:12px;align-items:flex-start;">
+                <i class="fa-solid fa-database" style="color:#0052cc;font-size:1.1rem;margin-top:2px;flex-shrink:0;"></i>
+                <div>
+                  <div style="font-size:.875rem;font-weight:600;color:var(--c-text);margin-bottom:2px;">CMDB / Assets</div>
+                  <div style="font-size:.78rem;color:var(--c-muted);">Activos TI · Configuraciones</div>
+                </div>
+              </div>
+              <div style="padding:16px;background:var(--c-bg);border-radius:var(--r-s);display:flex;gap:12px;align-items:flex-start;">
+                <i class="fa-solid fa-list-check" style="color:#0052cc;font-size:1.1rem;margin-top:2px;flex-shrink:0;"></i>
+                <div>
+                  <div style="font-size:.875rem;font-weight:600;color:var(--c-text);margin-bottom:2px;">Jira Software</div>
+                  <div style="font-size:.78rem;color:var(--c-muted);">Proyectos · Sprints · Scrum</div>
+                </div>
+              </div>
+              <div style="padding:16px;background:var(--c-bg);border-radius:var(--r-s);display:flex;gap:12px;align-items:flex-start;">
+                <i class="fa-solid fa-book-open" style="color:#0052cc;font-size:1.1rem;margin-top:2px;flex-shrink:0;"></i>
+                <div>
+                  <div style="font-size:.875rem;font-weight:600;color:var(--c-text);margin-bottom:2px;">Confluence</div>
+                  <div style="font-size:.78rem;color:var(--c-muted);">Knowledge Base · Documentación</div>
+                </div>
+              </div>
+              <div style="padding:16px;background:var(--c-bg);border-radius:var(--r-s);display:flex;gap:12px;align-items:flex-start;">
+                <i class="fa-solid fa-shield-halved" style="color:#0052cc;font-size:1.1rem;margin-top:2px;flex-shrink:0;"></i>
+                <div>
+                  <div style="font-size:.875rem;font-weight:600;color:var(--c-text);margin-bottom:2px;">Implementación ITIL</div>
+                  <div style="font-size:.78rem;color:var(--c-muted);">Marcos · Procesos · Mejora continua</div>
+                </div>
+              </div>
+              <div style="padding:16px;background:var(--c-bg);border-radius:var(--r-s);display:flex;gap:12px;align-items:flex-start;">
+                <i class="fa-solid fa-gears" style="color:#0052cc;font-size:1.1rem;margin-top:2px;flex-shrink:0;"></i>
+                <div>
+                  <div style="font-size:.875rem;font-weight:600;color:var(--c-text);margin-bottom:2px;">Automatización de flujos</div>
+                  <div style="font-size:.78rem;color:var(--c-muted);">Reglas · Triggers · Workflows</div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="service-card reveal reveal-delay-2">
@@ -260,8 +302,9 @@
           </div>
           <p class="footer-desc" data-i18n="footer.desc">Empresa dominicana especializada en soluciones tecnológicas empresariales con más de 18 años de experiencia.</p>
           <div class="footer-socials">
-            <a href="https://wa.me/18097031161" class="footer-social" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="mailto:randdyfeliz@hotmail.com" class="footer-social"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.facebook.com/p/System-Shop-Solutions-3S-100071545629619/" class="footer-social footer-social--facebook" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="http://linkedin.com/company/system-shop-solutions-3s" class="footer-social footer-social--linkedin" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://wa.me/18097031161" class="footer-social" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
           </div>
         </div>
         <div class="footer-col">
@@ -288,7 +331,7 @@
           <div class="footer-contact-items">
             <div class="footer-contact-item"><i class="fa-brands fa-whatsapp"></i><span>+1 809 703 1161</span></div>
             <div class="footer-contact-item"><i class="fa-brands fa-whatsapp"></i><span>+1 809 219 2667</span></div>
-            <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>randdyfeliz@hotmail.com</span></div>
+            <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>info@3ssoftware.com.do</span></div>
           </div>
         </div>
       </div>

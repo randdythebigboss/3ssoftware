@@ -1659,3 +1659,74 @@ p  { color: var(--c-body); line-height: 1.75; }
 h2.section-title + .section-subtitle {
   margin-top: -4px;
 }
+
+/* ============================================================
+   SOCIAL MEDIA ICONS
+   ============================================================ */
+.footer-social--facebook { background: rgba(255,255,255,.06); }
+.footer-social--facebook:hover { background: #1877F2; color: white; }
+.footer-social--linkedin { background: rgba(255,255,255,.06); }
+.footer-social--linkedin:hover { background: #0A66C2; color: white; }
+
+/* ============================================================
+   MOBILE OPTIMIZATION (v3)
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Full-width buttons in hero and CTA */
+  .hero-cta { flex-direction: column; }
+  .hero-cta .btn { width: 100%; justify-content: center; }
+
+  /* CTA premium actions: stack and full width */
+  .cta-premium-actions { width: 100%; }
+  .cta-premium-actions .btn { width: 100%; }
+
+  /* WhatsApp buttons in contact: full width */
+  .wa-buttons .btn { width: 100%; justify-content: center; }
+
+  /* Form submit button: ensure full width */
+  #contactForm [type="submit"] { width: 100%; }
+
+  /* Hero subtitle: smaller on mobile */
+  .hero-subtitle { font-size: 1rem; margin-bottom: 32px; }
+
+  /* Intro highlight: wrap better */
+  .intro-highlight { flex-direction: column; gap: 8px; }
+
+  /* Page hero: tighter on mobile */
+  .page-hero { padding: calc(var(--nav-h) + 40px) 0 56px; }
+  .page-hero h1 { font-size: clamp(1.8rem, 6vw, 2.8rem); }
+
+  /* Principal contact card: stack */
+  .principal-contact-card { flex-direction: column; align-items: flex-start; }
+
+  /* Section padding reduction on small screens */
+  .section { padding: 64px 0; }
+
+  /* Contact layout: tighter gap */
+  .contact-layout { gap: 40px; }
+
+  /* Service group: reduce padding */
+  .service-group.section--bg { padding: 28px !important; }
+
+  /* Metric value: scale down */
+  .metric-value { font-size: 2rem; }
+
+  /* Team grid: gap */
+  .team-grid { gap: 16px; }
+}
+
+@media (max-width: 480px) {
+  /* Hero stats: smaller gap */
+  .hero-stats { gap: 16px; flex-wrap: nowrap; }
+  .hero-stat-value { font-size: 1.3rem; }
+  .hero-stat-label { font-size: .65rem; }
+
+  /* About visual stats: single column on very small */
+  .about-visual-stats { grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  /* CTA premium: more breathing room */
+  .section--cta-premium { padding: 72px 0; }
+
+  /* Form card: tighter padding */
+  .contact-form-card { padding: 28px 20px; }
+}

@@ -36,10 +36,10 @@ const translations = {
 
   /* ---- HOME INTRO ---- */
   "intro.label":    { es: "Quiénes somos", en: "Who We Are" },
-  "intro.title":    { es: "Soluciones tecnológicas integrales para el mercado dominicano", en: "Comprehensive technology solutions for the Dominican market" },
-  "intro.text":     { es: "Durante más de 18 años hemos acompañado a empresas dominicanas a tomar el control de sus operaciones con tecnología que realmente funciona. No vendemos licencias — construimos soluciones que crecen con su negocio.", en: "For over 18 years we have helped Dominican companies take control of their operations with technology that actually works. We don't sell licenses — we build solutions that grow with your business." },
+  "intro.title":    { es: "Tecnología diseñada para escalar su negocio y acelerar su crecimiento", en: "Technology designed to scale your business and accelerate your growth" },
+  "intro.text":     { es: "Durante más de 18 años hemos acompañado a empresas de todos los tamaños a tomar el control de sus operaciones con tecnología que realmente funciona. No vendemos licencias — construimos soluciones que crecen con su negocio.", en: "For over 18 years we have helped companies of all sizes take control of their operations with technology that actually works. We don't sell licenses — we build solutions that grow with your business." },
   "feat1.title":    { es: "Experiencia Comprobada", en: "Proven Experience" },
-  "feat1.text":     { es: "Más de 18 años desarrollando e implementando soluciones tecnológicas en el mercado dominicano.", en: "Over 18 years developing and implementing technology solutions in the Dominican market." },
+  "feat1.text":     { es: "Más de 18 años desarrollando e implementando soluciones tecnológicas para empresas de todos los tamaños y sectores.", en: "Over 18 years developing and implementing technology solutions for companies of all sizes and sectors." },
   "feat2.title":    { es: "Soporte Continuo", en: "Continuous Support" },
   "feat2.text":     { es: "Acompañamiento permanente a nuestros clientes con soporte técnico especializado y gestión proactiva.", en: "Permanent support for our clients with specialized technical assistance and proactive management." },
   "feat3.title":    { es: "Automatización Inteligente", en: "Intelligent Automation" },
@@ -65,8 +65,8 @@ const translations = {
 
   /* ---- HOME SOLUTIONS ---- */
   "sol.label":   { es: "Nuestras soluciones", en: "Our Solutions" },
-  "sol.title":   { es: "Sistemas listos para el mercado dominicano", en: "Systems ready for the Dominican market" },
-  "sol.subtitle":{ es: "Soluciones funcionales, comprobadas y adaptadas a las necesidades reales del sector empresarial dominicano.", en: "Functional, proven solutions adapted to the real needs of the Dominican business sector." },
+  "sol.title":   { es: "Sistemas listos para empresas en crecimiento", en: "Systems ready for growing businesses" },
+  "sol.subtitle":{ es: "Soluciones robustas, comprobadas y adaptadas a las necesidades reales de organizaciones modernas.", en: "Robust, proven solutions adapted to the real needs of modern organizations." },
   "sol1.title":  { es: "Facturación Electrónica", en: "Electronic Invoicing" },
   "sol1.text":   { es: "Sistema DGII-compliant para emisión de comprobantes fiscales electrónicos (e-CF).", en: "DGII-compliant system for electronic fiscal voucher (e-CF) issuance." },
   "sol2.title":  { es: "Punto de Venta (POS)", en: "Point of Sale (POS)" },
@@ -118,6 +118,7 @@ const translations = {
   "con.principal.label": { es: "Dirección General", en: "Executive Contact" },
   "con.principal.name":  { es: "Ramón Feliz", en: "Ramón Feliz" },
   "con.principal.role":  { es: "Gerente General · System Shop Solutions 3S", en: "General Manager · System Shop Solutions 3S" },
+  "con.social.label":    { es: "Redes Sociales", en: "Follow Us" },
 
   /* ---- TRUST BAR ---- */
   "trust1": { es: "DGII Compliance", en: "DGII Compliance" },
@@ -127,7 +128,7 @@ const translations = {
   "trust5": { es: "Plataformas Atlassian", en: "Atlassian Platforms" },
 
   /* ---- FOOTER ---- */
-  "footer.desc":    { es: "Empresa dominicana especializada en soluciones tecnológicas empresariales con más de 18 años de experiencia transformando negocios.", en: "Dominican company specialized in enterprise technology solutions with over 18 years of experience transforming businesses." },
+  "footer.desc":    { es: "Empresa 100% dominicana especializada en soluciones tecnológicas con más de 18 años transformando organizaciones en crecimiento.", en: "100% Dominican company specialized in technology solutions with over 18 years transforming growing organizations." },
   "footer.nav":     { es: "Navegación", en: "Navigation" },
   "footer.services":{ es: "Servicios", en: "Services" },
   "footer.srv1":    { es: "Desarrollo de Software", en: "Software Development" },
@@ -135,7 +136,7 @@ const translations = {
   "footer.srv3":    { es: "Gestión de TI", en: "IT Management" },
   "footer.srv4":    { es: "Consultoría", en: "Consulting" },
   "footer.contact": { es: "Contacto", en: "Contact" },
-  "footer.copy":    { es: "© 2024 System Shop Solutions 3S. Todos los derechos reservados.", en: "© 2024 System Shop Solutions 3S. All rights reserved." },
+  "footer.copy":    { es: "© 2025 System Shop Solutions 3S. Todos los derechos reservados.", en: "© 2025 System Shop Solutions 3S. All rights reserved." },
   "footer.privacy": { es: "Privacidad", en: "Privacy" },
   "footer.terms":   { es: "Términos", en: "Terms" },
 
@@ -178,22 +179,22 @@ const translations = {
 
   /* ---- SOLUTIONS PAGE ---- */
   "sol.page.title":  { es: "Nuestras Soluciones", en: "Our Solutions" },
-  "sol.page.sub":    { es: "Sistemas empresariales desarrollados y adaptados para las necesidades reales del mercado dominicano.", en: "Business systems developed and adapted for the real needs of the Dominican market." },
-  "sol.intro":       { es: "Desarrollamos sistemas completos, robustos y fáciles de usar que abordan los retos más importantes del empresario dominicano: control, automatización, visibilidad y cumplimiento.", en: "We develop complete, robust and easy-to-use systems that address the most important challenges of the Dominican entrepreneur: control, automation, visibility and compliance." },
+  "sol.page.sub":    { es: "Sistemas empresariales robustos, escalables y listos para transformar su operación.", en: "Robust, scalable business systems ready to transform your operations." },
+  "sol.intro":       { es: "Desarrollamos sistemas completos, robustos y fáciles de usar que abordan los retos más importantes de cualquier organización moderna: control, automatización, visibilidad y escalabilidad.", en: "We develop complete, robust and easy-to-use systems that address the most important challenges of any modern organization: control, automation, visibility and scalability." },
 
   /* ---- ABOUT PAGE ---- */
   "about.page.title": { es: "Sobre Nosotros", en: "About Us" },
-  "about.page.sub":   { es: "Empresa dominicana con más de 18 años transformando negocios con tecnología.", en: "Dominican company with over 18 years transforming businesses with technology." },
+  "about.page.sub":   { es: "Empresa 100% dominicana con más de 18 años transformando negocios con tecnología de clase mundial.", en: "100% Dominican company with over 18 years transforming businesses with world-class technology." },
   "about.who.label":  { es: "Nuestra historia", en: "Our Story" },
   "about.who.title":  { es: "Somos System Shop Solutions 3S", en: "We are System Shop Solutions 3S" },
-  "about.who.p1":     { es: "System Shop Solutions 3S es una empresa dominicana fundada con la misión de acercar la tecnología empresarial a las empresas de todos los tamaños en la República Dominicana. Durante más de 18 años, hemos acompañado a cientos de empresas en su proceso de digitalización y automatización.", en: "System Shop Solutions 3S is a Dominican company founded with the mission of bringing enterprise technology closer to companies of all sizes in the Dominican Republic. For over 18 years, we have accompanied hundreds of companies in their digitalization and automation process." },
+  "about.who.p1":     { es: "System Shop Solutions 3S es una empresa 100% dominicana fundada con la misión de acercar la tecnología empresarial de clase mundial a organizaciones de todos los tamaños. Durante más de 18 años, hemos acompañado a cientos de empresas en su proceso de digitalización y automatización.", en: "System Shop Solutions 3S is a 100% Dominican company founded with the mission of bringing world-class enterprise technology to organizations of all sizes. For over 18 years, we have accompanied hundreds of companies in their digitalization and automation process." },
   "about.who.p2":     { es: "Nos especializamos en soluciones multiusuario y multi-empresa, lo que significa que nuestros sistemas crecen junto con su negocio. Ya sea una pequeña empresa con un usuario o un grupo empresarial con múltiples sucursales, tenemos la solución adecuada.", en: "We specialize in multi-user and multi-company solutions, meaning our systems grow with your business. Whether a small company with one user or a business group with multiple branches, we have the right solution." },
-  "about.who.p3":     { es: "Nuestro equipo de profesionales tecnológicos dominicanos está comprometido con brindar soporte de calidad, implementaciones exitosas y una relación de largo plazo con cada uno de nuestros clientes.", en: "Our team of Dominican technology professionals is committed to providing quality support, successful implementations and a long-term relationship with each of our clients." },
+  "about.who.p3":     { es: "Nuestro equipo de profesionales tecnológicos está comprometido con brindar soporte de calidad, implementaciones exitosas y una relación de largo plazo con cada uno de nuestros clientes.", en: "Our team of technology professionals is committed to providing quality support, successful implementations and a long-term relationship with each of our clients." },
   "about.trust.label":{ es: "Por qué elegirnos", en: "Why Choose Us" },
   "about.trust.title":{ es: "Confianza construida con resultados", en: "Trust built with results" },
   "about.trust.sub":  { es: "No solo vendemos software. Somos su socio tecnológico de largo plazo.", en: "We don't just sell software. We are your long-term technology partner." },
   "pillar1.t":        { es: "18+ Años de Trayectoria", en: "18+ Years of Track Record" },
-  "pillar1.d":        { es: "Décadas de experiencia en el mercado dominicano nos dan la solidez que su empresa necesita.", en: "Decades of experience in the Dominican market give us the solidity your company needs." },
+  "pillar1.d":        { es: "Décadas de experiencia implementando tecnología para empresas de todos los sectores nos dan la solidez que su organización necesita.", en: "Decades of experience implementing technology for companies across all sectors give us the solidity your organization needs." },
   "pillar2.t":        { es: "Soporte en Español", en: "Spanish Language Support" },
   "pillar2.d":        { es: "Soporte técnico especializado en español, entendiendo el contexto local de su negocio.", en: "Specialized technical support in Spanish, understanding your business's local context." },
   "pillar3.t":        { es: "Sistemas Multi-Empresa", en: "Multi-Company Systems" },
@@ -201,7 +202,7 @@ const translations = {
   "pillar4.t":        { es: "Continuidad del Negocio", en: "Business Continuity" },
   "pillar4.d":        { es: "Implementaciones planificadas para minimizar interrupciones y garantizar la continuidad operativa.", en: "Planned implementations to minimize disruptions and ensure operational continuity." },
   "pillar5.t":        { es: "Cumplimiento DGII", en: "DGII Compliance" },
-  "pillar5.d":        { es: "Soluciones alineadas con los requisitos fiscales y regulatorios de la DGII y el mercado dominicano.", en: "Solutions aligned with the fiscal and regulatory requirements of the DGII and the Dominican market." },
+  "pillar5.d":        { es: "Soluciones alineadas con los requisitos fiscales de la DGII y la normativa fiscal vigente.", en: "Solutions aligned with the DGII fiscal requirements and current tax regulations." },
   "pillar6.t":        { es: "Capacitación Incluida", en: "Training Included" },
   "pillar6.d":        { es: "Cada implementación incluye capacitación completa del equipo para garantizar una adopción exitosa.", en: "Every implementation includes complete team training to ensure successful adoption." },
 
