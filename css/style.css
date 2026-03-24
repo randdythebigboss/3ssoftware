@@ -1897,14 +1897,189 @@ h2.section-title + .section-subtitle {
 
 /* ── 19. Nav right: ensure lang-toggle visible on mobile ── */
 @media (max-width: 768px) {
-  .nav-right {
-    gap: 8px;
+  .nav-right  { gap: 8px; }
+  .lang-toggle{ padding: 3px; gap: 2px; }
+  .lang-btn   { padding: 5px 10px; font-size: .7rem; letter-spacing: .04em; }
+}
+
+/* ============================================================
+   MOBILE REFINEMENT PASS 2 (v5) — Polish & Premium
+   ============================================================ */
+
+/* ─── A. NAVBAR — rebalance on mobile ─────────────────────── */
+@media (max-width: 768px) {
+  .logo-mark { width: 34px; height: 34px; font-size: .8rem; border-radius: 8px; }
+  .logo-name { font-size: .74rem; }
+  .logo-tag  { font-size: .52rem; letter-spacing: .05em; }
+  .nav-logo  { gap: 9px; }
+}
+
+/* ─── B. LANGUAGE TOGGLE — premium look ────────────────────── */
+@media (max-width: 768px) {
+  /* Transparent navbar (home hero) */
+  .navbar:not(.white) .lang-toggle {
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.18);
   }
-  .lang-toggle {
-    padding: 2px;
+  /* White navbar (inner pages) */
+  .navbar.white .lang-toggle {
+    background: var(--c-bg);
+    border: 1px solid var(--c-border);
   }
-  .lang-btn {
-    padding: 4px 10px;
-    font-size: .7rem;
+  .lang-btn   { line-height: 1.2; }
+}
+
+/* ─── C. HERO — refined scaling & spacing ──────────────────── */
+@media (max-width: 768px) {
+  .hero-content { padding: 36px 0 52px; }
+
+  .hero-eyebrow {
+    font-size: .63rem;
+    letter-spacing: .1em;
+    line-height: 1.65;
+    margin-bottom: 18px;
   }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 7.5vw, 2.4rem);
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    margin-bottom: 16px;
+  }
+
+  .hero-subtitle {
+    font-size: .9375rem;
+    line-height: 1.7;
+    margin-bottom: 28px;
+    max-width: 100%;
+  }
+
+  .hero-cta          { gap: 10px; margin-bottom: 32px; }
+  .hero-stats-divider{ margin: 22px 0 18px; }
+}
+
+/* ─── D. BUTTONS — reduce height on mobile ─────────────────── */
+@media (max-width: 768px) {
+  .btn-lg { padding: 13px 26px; font-size: .9375rem; }
+
+  /* Full-width buttons: no need for wide horizontal padding */
+  .hero-cta .btn,
+  .cta-premium-actions .btn { padding-left: 20px; padding-right: 20px; }
+}
+
+/* ─── E. STATS — clean grid layout on small screens ────────── */
+@media (max-width: 480px) {
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    width: 100%;
+  }
+  .hero-stat {
+    text-align: center;
+    padding: 0 6px;
+  }
+  /* Replace pseudo-element divider with border */
+  .hero-stat + .hero-stat::before { display: none; }
+  .hero-stat + .hero-stat         { border-left: 1px solid rgba(255,255,255,.1); }
+
+  .hero-stat-value { font-size: 1.35rem; }
+  .hero-stat-label { font-size: .6rem; letter-spacing: 0; line-height: 1.4; }
+}
+@media (max-width: 360px) {
+  .hero-stat-value { font-size: 1.2rem; }
+  .hero-stat-label { font-size: .57rem; }
+}
+
+/* ─── F. SECTION HEADINGS — better mobile scaling ──────────── */
+@media (max-width: 768px) {
+  h2.section-title {
+    font-size: clamp(1.35rem, 5.5vw, 1.85rem);
+    letter-spacing: -.015em;
+  }
+  .section-subtitle { font-size: .9rem; margin-bottom: 36px; }
+}
+
+/* ─── G. TRUST BAR — structured 2-col grid on medium-small ─── */
+@media (max-width: 640px) {
+  .trust-bar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 20px;
+    justify-items: start;
+    padding: 24px 0;
+  }
+  .trust-item { font-size: .8rem; gap: 8px; }
+}
+@media (max-width: 360px) {
+  .trust-bar { grid-template-columns: 1fr; gap: 12px; }
+}
+
+/* ─── H. CARDS — tighter on small screens ──────────────────── */
+@media (max-width: 480px) {
+  .service-card  { padding: 24px 18px; }
+  .solution-card { padding: 24px 18px; }
+  .feature-card  { padding: 28px 18px; }
+  .metric-card   { padding: 28px 18px; }
+}
+@media (max-width: 480px) {
+  .team-card[style] { padding: 24px 16px 20px !important; }
+}
+
+/* ─── I. ABOUT PAGE ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .about-visual-card { padding: 32px 24px; }
+  .about-pillars     { gap: 14px; }
+}
+
+/* ─── J. SOLUTIONS PAGE — full-width cards ──────────────────── */
+@media (max-width: 640px) {
+  .solution-card-full { padding: 28px 20px !important; gap: 20px !important; }
+}
+
+/* ─── K. CONTACT PAGE ───────────────────────────────────────── */
+@media (max-width: 768px) {
+  .contact-layout  { gap: 28px; }
+  .contact-items   { gap: 14px; }
+  .contact-info h3 { font-size: 1.2rem; }
+  .wa-buttons      { gap: 10px; margin-top: 20px; }
+  .contact-item-icon { width: 40px; height: 40px; font-size: 1rem; }
+}
+
+/* ─── L. PAGE HERO (inner pages) ────────────────────────────── */
+@media (max-width: 768px) {
+  .page-hero { padding: calc(var(--nav-h) + 32px) 0 48px; }
+}
+
+/* ─── M. CTA PREMIUM SECTION ────────────────────────────────── */
+@media (max-width: 768px) {
+  .section--cta-premium { padding: 64px 0; }
+  .cta-premium-text h2  { font-size: clamp(1.35rem, 5.5vw, 1.85rem); }
+  .cta-premium-text p   { font-size: .9rem; }
+}
+
+/* ─── N. FOOTER ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .footer         { padding: 52px 0 0; }
+  .footer-grid    { gap: 28px; margin-bottom: 36px; }
+  .footer-socials { gap: 8px; }
+  .footer-social  { width: 34px; height: 34px; }
+  .footer-col h4  { margin-bottom: 14px; }
+}
+
+/* ─── O. FORMS ───────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .form-subtitle { margin-bottom: 24px; }
+  .form-group    { margin-bottom: 16px; }
+  .form-group label { font-size: .8rem; }
+}
+
+/* ─── P. OVERFLOW SAFETY ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero-content,
+  .cta-premium-inner,
+  .intro-split,
+  .contact-layout,
+  .services-grid,
+  .solutions-grid { min-width: 0; overflow-wrap: break-word; word-break: break-word; }
 }

@@ -13,8 +13,9 @@ const translations = {
   "nav.cta":       { es: "Contáctenos", en: "Contact Us" },
 
   /* ---- HOME HERO ---- */
-  "hero.badge":     { es: "Transformación Digital", en: "Digital Transformation" },
-  "hero.title":     { es: "Tecnología que <span>impulsa</span> el crecimiento de su empresa", en: "Technology that <span>drives</span> your business growth" },
+  "hero.badge":   { es: "Transformación Digital", en: "Digital Transformation" },
+  "hero.eyebrow": { es: "<em>Empresa 100% Dominicana</em> &nbsp;·&nbsp; Software &amp; Consultoría Tecnológica", en: "<em>100% Dominican Company</em> &nbsp;·&nbsp; Software &amp; Technology Consulting" },
+  "hero.title":   { es: "Tecnología que <span>impulsa</span> el crecimiento de su empresa", en: "Technology that <span>drives</span> your business growth" },
   "hero.subtitle":  { es: "Desarrollamos, automatizamos e integramos sistemas que dan a su empresa control total, visibilidad operativa y capacidad real de escalar.", en: "We develop, automate and integrate systems that give your business full control, operational visibility and the real capacity to scale." },
   "hero.cta1":      { es: "Nuestros Servicios", en: "Our Services" },
   "hero.cta2":      { es: "WhatsApp", en: "WhatsApp" },
