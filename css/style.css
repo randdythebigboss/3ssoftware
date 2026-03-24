@@ -2188,3 +2188,101 @@ h2.section-title + .section-subtitle {
 @media (max-width: 480px) {
   .about-visual-stat .value { font-size: 1.8rem; }
 }
+
+/* ============================================================
+   MOBILE STRONG PASS (v7) — Aggressive, visible corrections.
+   Each rule here intentionally overrides a previous pass value
+   because earlier trims were too incremental to be noticeable.
+   ============================================================ */
+
+/* ── 1. NAVBAR: smaller height, cleaner logo, separated controls ── */
+@media (max-width: 768px) {
+  /* Shrink nav height from 64px → 58px */
+  :root { --nav-h: 58px; }
+
+  /* Smaller logo block: 30px icon, no subtitle tag, tighter gap */
+  .logo-mark { width: 30px; height: 30px; font-size: .75rem; border-radius: 7px; }
+  .logo-name { font-size: .68rem; letter-spacing: 0; }
+  .logo-tag  { display: none; }          /* "Technology Company" hidden — too small to read */
+  .nav-logo  { gap: 8px; }
+
+  /* Visual separation between lang-toggle and hamburger */
+  .nav-right { gap: 14px; }
+  .nav-hamburger {
+    padding: 7px 8px;
+    background: rgba(255,255,255,.09);
+    border-radius: 7px;
+  }
+  .navbar.white .nav-hamburger { background: rgba(0,0,0,.05); }
+  .nav-hamburger span { width: 20px; }
+}
+
+/* ── 2. HERO: kill full-viewport height, compact all spacing ── */
+@media (max-width: 768px) {
+  /* Override 100vh (base) AND 100svh (@supports block in Pass 3) */
+  .hero { min-height: 0; }
+
+  /* Was 36px top / 52px bottom — too generous */
+  .hero-content { padding: 20px 0 32px; }
+
+  /* Eyebrow: tighter bottom gap */
+  .hero-eyebrow { margin-bottom: 10px; font-size: .63rem; }
+
+  /* Heading: was clamp(1.8rem, 7.5vw, 2.4rem) — still large at 390px.
+     New value is visibly smaller on all phones 320–768px. */
+  .hero-title {
+    font-size: clamp(1.45rem, 5.8vw, 1.85rem);
+    line-height: 1.12;
+    letter-spacing: -.025em;
+    margin-bottom: 12px;
+  }
+
+  /* Subtitle: tighter */
+  .hero-subtitle {
+    font-size: .875rem;
+    line-height: 1.65;
+    margin-bottom: 20px;
+  }
+
+  /* CTA group: less gap, less bottom margin before stats */
+  .hero-cta           { gap: 8px; margin-bottom: 20px; }
+  .hero-stats-divider { margin: 14px 0 10px; }
+}
+
+/* ── 3. CTA BUTTONS: less tall, less heavy ─────────────────── */
+@media (max-width: 768px) {
+  /* Was 13px 26px — still 41px tall. Now 10px 16px = ~35px. */
+  .btn-lg { padding: 10px 16px; font-size: .875rem; }
+
+  /* Full-width hero/CTA buttons: minimal side padding */
+  .hero-cta .btn,
+  .cta-premium-actions .btn { padding-left: 16px; padding-right: 16px; }
+}
+
+/* ── 4. STATS: better vertical rhythm inside each stat ──────── */
+@media (max-width: 768px) {
+  .hero-stat        { padding: 0 8px; }
+  .hero-stat-value  { font-size: 1.35rem; line-height: 1; }
+  .hero-stat-label  { font-size: .62rem; margin-top: 5px; }
+}
+@media (max-width: 360px) {
+  .hero-stat-value { font-size: 1.15rem; }
+  .hero-stat-label { font-size: .56rem; }
+}
+
+/* ── 5. GLOBAL SECTION RHYTHM ────────────────────────────────── */
+/* Was 64px / 48px — still feels dense between sections on mobile */
+@media (max-width: 768px) {
+  .section     { padding: 52px 0; }
+  .section--sm { padding: 36px 0; }
+}
+@media (max-width: 400px) {
+  .section     { padding: 44px 0; }
+  .section--sm { padding: 28px 0; }
+}
+
+/* ── 6. SECTION HEADINGS: more compact below 480px ─────────── */
+@media (max-width: 480px) {
+  h2.section-title { font-size: clamp(1.25rem, 5.5vw, 1.55rem); }
+  .section-subtitle { font-size: .85rem; margin-bottom: 28px; }
+}
