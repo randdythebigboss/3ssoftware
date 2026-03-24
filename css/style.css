@@ -2389,3 +2389,79 @@ h2.section-title + .section-subtitle {
   .section     { padding: 40px 0; }
   .section--sm { padding: 24px 0; }
 }
+
+/* ============================================================
+   HERO MOBILE (v9) — Targeted homepage hero only.
+   Addresses density, eyebrow noise, heading size, button
+   hierarchy, and stats breathing. Mobile breakpoints only.
+   Desktop is completely unaffected.
+   ============================================================ */
+
+/* 1. EYEBROW — hide on ≤375px: saves ~22px and removes clutter */
+@media (max-width: 375px) {
+  .hero-eyebrow { display: none; }
+}
+/* On 376–768px: smaller, lower-contrast, less demanding */
+@media (max-width: 768px) {
+  .hero-eyebrow {
+    font-size:     .58rem;
+    letter-spacing: .04em;
+    margin-bottom: 6px;
+    opacity: .7;
+  }
+}
+
+/* 2. HERO PADDING — reduce vertical space around content */
+@media (max-width: 768px) {
+  .hero { min-height: 0; padding-top: 0; }
+  .hero-content {
+    padding-top:    calc(var(--nav-h) + 6px);
+    padding-bottom: 20px;
+  }
+}
+
+/* 3. HEADLINE — visibly smaller floor; 1.3rem was still dominant */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size:      clamp(1.2rem, 4.8vw, 1.5rem);
+    line-height:    1.1;
+    letter-spacing: -.03em;
+    margin-bottom:  10px;
+  }
+}
+
+/* 4. SUBTITLE — tighter line-height and bottom gap */
+@media (max-width: 768px) {
+  .hero-subtitle {
+    font-size:     .84rem;
+    line-height:   1.55;
+    margin-bottom: 14px;
+  }
+}
+
+/* 5. CTA BUTTONS — reduce height; establish primary/secondary hierarchy */
+@media (max-width: 768px) {
+  .hero-cta { gap: 6px; margin-bottom: 20px; }
+
+  /* Use longhand to only reduce vertical padding; horizontal stays at 14px */
+  .hero-cta .btn { padding-top: 8px; padding-bottom: 8px; }
+
+  /* Primary CTA keeps full solid color — stays dominant */
+
+  /* WhatsApp / outline — demoted to a clearly secondary role:
+     near-invisible border, muted text, smaller icon */
+  .hero-cta .btn-outline {
+    border-color: rgba(255,255,255,.18);
+    color:        rgba(255,255,255,.6);
+    font-size:    .825rem;
+  }
+  .hero-cta .btn-outline i { font-size: .88em; }
+}
+
+/* 6. STATS — more breathing room above, better value/label spacing */
+@media (max-width: 768px) {
+  .hero-stats-divider { margin-top: 20px; margin-bottom: 14px; }
+  .hero-stat          { padding: 0 8px; }
+  .hero-stat-value    { font-size: 1.2rem; line-height: 1; }
+  .hero-stat-label    { font-size: .58rem; margin-top: 6px; line-height: 1.3; }
+}
