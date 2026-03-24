@@ -1729,4 +1729,12 @@ h2.section-title + .section-subtitle {
 
   /* Form card: tighter padding */
   .contact-form-card { padding: 28px 20px; }
+
+  /* Atlassian capability tiles: stack to 1 col on small screens */
+  .atlassian-tiles { grid-template-columns: 1fr !important; }
+}
+
+/* Atlassian tiles — 2-col on tablet */
+@media (max-width: 900px) {
+  .atlassian-tiles { grid-template-columns: repeat(2, 1fr) !important; }
 }
