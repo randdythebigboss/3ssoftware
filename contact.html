@@ -43,7 +43,7 @@
   </nav>
 
   <nav class="nav-mobile" id="mobile-menu">
-    <button class="nav-mobile-close" style="position:absolute;top:24px;right:24px;font-size:1.5rem;color:rgba(255,255,255,.7);background:none;border:none;cursor:pointer;">
+    <button class="nav-mobile-close" aria-label="Close menu">
       <i class="fa-solid fa-xmark"></i>
     </button>
     <a href="index.html" data-i18n="nav.home">Inicio</a>
@@ -118,7 +118,7 @@
             <div class="contact-item">
               <div class="contact-item-icon"><i class="fa-solid fa-location-dot"></i></div>
               <div class="contact-item-text">
-                <strong>Ubicación</strong>
+                <strong data-i18n="con.location.label">Ubicación</strong>
                 <span>República Dominicana</span>
               </div>
             </div>
@@ -310,24 +310,24 @@
   <!-- ADDITIONAL INFO ROW -->
   <section class="section--sm section--bg">
     <div class="container">
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+      <div class="info-cards-grid">
 
         <div class="feature-card reveal reveal-delay-1" style="text-align:center;">
           <div class="feature-icon" style="margin:0 auto 16px;"><i class="fa-solid fa-clock"></i></div>
-          <h3 style="margin-bottom:8px;">Respuesta Rápida</h3>
-          <p style="font-size:.875rem;">Respondemos en menos de 24 horas en días hábiles.</p>
+          <h3 style="margin-bottom:8px;" data-i18n="con.feat1.t">Respuesta Rápida</h3>
+          <p style="font-size:.875rem;" data-i18n="con.feat1.d">Respondemos en menos de 24 horas en días hábiles.</p>
         </div>
 
         <div class="feature-card reveal reveal-delay-2" style="text-align:center;">
           <div class="feature-icon" style="margin:0 auto 16px;"><i class="fa-solid fa-handshake"></i></div>
-          <h3 style="margin-bottom:8px;">Consulta Sin Costo</h3>
-          <p style="font-size:.875rem;">Primera consulta gratuita para evaluar sus necesidades tecnológicas.</p>
+          <h3 style="margin-bottom:8px;" data-i18n="con.feat2.t">Consulta Sin Costo</h3>
+          <p style="font-size:.875rem;" data-i18n="con.feat2.d">Primera consulta gratuita para evaluar sus necesidades tecnológicas.</p>
         </div>
 
         <div class="feature-card reveal reveal-delay-3" style="text-align:center;">
           <div class="feature-icon" style="margin:0 auto 16px;"><i class="fa-solid fa-shield-check"></i></div>
-          <h3 style="margin-bottom:8px;">Información Segura</h3>
-          <p style="font-size:.875rem;">Su información es completamente confidencial y segura con nosotros.</p>
+          <h3 style="margin-bottom:8px;" data-i18n="con.feat3.t">Información Segura</h3>
+          <p style="font-size:.875rem;" data-i18n="con.feat3.d">Su información es completamente confidencial y segura con nosotros.</p>
         </div>
 
       </div>

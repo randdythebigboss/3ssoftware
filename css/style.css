@@ -343,12 +343,20 @@ p  { color: var(--c-body); line-height: 1.75; }
   position: fixed;
   inset: 0;
   background: var(--c-dark);
-  z-index: 999;
+  z-index: 1001; /* above navbar (1000) so it fully covers it */
   flex-direction: column;
-  padding: 100px 32px 40px;
+  padding: 88px 32px 40px;
   gap: 8px;
+  overflow-y: auto;
 }
-.nav-mobile.open { display: flex; }
+.nav-mobile.open {
+  display: flex;
+  animation: menuSlideIn .22s ease forwards;
+}
+@keyframes menuSlideIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 .nav-mobile a {
   font-size: 1.4rem;
   font-weight: 700;
@@ -1737,4 +1745,166 @@ h2.section-title + .section-subtitle {
 /* Atlassian tiles — 2-col on tablet */
 @media (max-width: 900px) {
   .atlassian-tiles { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+/* ============================================================
+   MOBILE-FIRST COMPREHENSIVE FIXES (v4)
+   ============================================================ */
+
+/* ── 1. Hamburger: hide when mobile menu is open ── */
+.nav-hamburger[aria-expanded="true"] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ── 2. Nav mobile close button: ensure always reachable ── */
+.nav-mobile-close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: rgba(255,255,255,.7);
+  background: rgba(255,255,255,.08);
+  border: none;
+  border-radius: var(--r-s);
+  cursor: pointer;
+  transition: var(--t);
+  z-index: 2;
+}
+.nav-mobile-close:hover {
+  background: rgba(255,255,255,.15);
+  color: white;
+}
+
+/* ── 3. Lang toggle: consistent look in nav footer ── */
+.nav-mobile-footer {
+  align-items: center;
+}
+.nav-mobile-footer .lang-toggle {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.1);
+}
+.nav-mobile-footer .lang-btn {
+  color: rgba(255,255,255,.55);
+}
+.nav-mobile-footer .lang-btn.active {
+  background: var(--c-accent);
+  color: white;
+}
+
+/* ── 4. Container: less padding on very small screens ── */
+@media (max-width: 400px) {
+  .container { padding: 0 16px; }
+}
+
+/* ── 5. Logo text: hide on very small screens to prevent overflow ── */
+@media (max-width: 370px) {
+  .logo-text { display: none; }
+  .nav-logo  { gap: 0; }
+}
+
+/* ── 6. Services grid: override inline 2-col on mobile ── */
+@media (max-width: 768px) {
+  .services-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ── 7. Form inputs: prevent iOS auto-zoom (triggers at <16px) ── */
+@media (max-width: 768px) {
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px;
+    padding: 13px 14px;
+  }
+}
+
+/* ── 8. Contact additional info grid: responsive ── */
+.info-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .info-cards-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 1024px) and (min-width: 769px) {
+  .info-cards-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ── 9. Trust bar: tighter on mobile ── */
+@media (max-width: 768px) {
+  .trust-bar {
+    gap: 20px;
+    padding: 28px 0;
+  }
+  .trust-item { font-size: .825rem; }
+}
+
+/* ── 10. Hero: reduce vertical padding on mobile ── */
+@media (max-width: 768px) {
+  .hero-content { padding: 40px 0 56px; }
+}
+
+/* ── 11. About intro: reduce gap in single-column layout ── */
+@media (max-width: 1024px) {
+  .about-intro { gap: 48px; }
+}
+
+/* ── 12. Section spacing: tighter on very small screens ── */
+@media (max-width: 400px) {
+  .section     { padding: 56px 0; }
+  .section--sm { padding: 40px 0; }
+}
+
+/* ── 13. Mobile nav: tighter on very small screens ── */
+@media (max-width: 360px) {
+  .nav-mobile       { padding: 76px 20px 32px; }
+  .nav-mobile a     { font-size: 1.2rem; }
+}
+
+/* ── 14. Buttons: allow wrap on very small screens ── */
+@media (max-width: 360px) {
+  .btn { white-space: normal; }
+}
+
+/* ── 15. Service group: reduce margin on mobile ── */
+@media (max-width: 768px) {
+  .service-group       { margin-bottom: 48px; }
+  .service-group-header{ margin-bottom: 24px; }
+}
+
+/* ── 16. Solutions page feature list: wrap correctly ── */
+@media (max-width: 480px) {
+  .solution-features { gap: 6px; }
+  .solution-feature  { font-size: .78rem; }
+}
+
+/* ── 17. Footer bottom: center-align on mobile ── */
+@media (max-width: 768px) {
+  .footer-legal { justify-content: center; }
+}
+
+/* ── 18. Page hero h1: prevent text overflow ── */
+@media (max-width: 768px) {
+  .page-hero h1 { word-break: break-word; }
+  .page-hero p  { font-size: 1rem; }
+}
+
+/* ── 19. Nav right: ensure lang-toggle visible on mobile ── */
+@media (max-width: 768px) {
+  .nav-right {
+    gap: 8px;
+  }
+  .lang-toggle {
+    padding: 2px;
+  }
+  .lang-btn {
+    padding: 4px 10px;
+    font-size: .7rem;
+  }
 }

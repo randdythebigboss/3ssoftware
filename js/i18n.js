@@ -79,6 +79,10 @@ const translations = {
   "sol5.text":   { es: "Nómina, asistencia, control de empleados y gestión de vacaciones y beneficios.", en: "Payroll, attendance, employee control and vacation/benefits management." },
   "sol6.title":  { es: "Sistema Escolar", en: "School System" },
   "sol6.text":   { es: "Plataforma integral para gestión académica, calificaciones, matrícula y comunicación escolar.", en: "Comprehensive platform for academic management, grades, enrollment and school communication." },
+  "sol7.title":  { es: "Dashboards y Reportería Ejecutiva", en: "Dashboards & Executive Reporting" },
+  "sol7.text":   { es: "Paneles de control gerenciales con métricas clave de negocio en tiempo real. Tome decisiones informadas basadas en datos concretos de su operación.", en: "Executive dashboards with key business metrics in real time. Make informed decisions based on concrete operational data." },
+  "sol8.title":  { es: "Transformación Digital Empresarial", en: "Enterprise Digital Transformation" },
+  "sol8.text":   { es: "Acompañamos a su empresa en el camino hacia la digitalización total: desde el diagnóstico de sus procesos actuales hasta la implementación completa de su ecosistema tecnológico.", en: "We guide your company toward full digitalization: from diagnosing your current processes to the complete implementation of your technology ecosystem." },
   "sol.viewall": { es: "Ver todas las soluciones", en: "View all solutions" },
 
   /* ---- HOME METRICS ---- */
@@ -119,6 +123,15 @@ const translations = {
   "con.principal.name":  { es: "Ramón Feliz", en: "Ramón Feliz" },
   "con.principal.role":  { es: "Gerente General · System Shop Solutions 3S", en: "General Manager · System Shop Solutions 3S" },
   "con.social.label":    { es: "Redes Sociales", en: "Follow Us" },
+  "con.location.label":  { es: "Ubicación", en: "Location" },
+
+  /* ---- CONTACT PAGE — TRUST CARDS ---- */
+  "con.feat1.t": { es: "Respuesta Rápida", en: "Quick Response" },
+  "con.feat1.d": { es: "Respondemos en menos de 24 horas en días hábiles.", en: "We respond within 24 hours on business days." },
+  "con.feat2.t": { es: "Consulta Sin Costo", en: "Free Consultation" },
+  "con.feat2.d": { es: "Primera consulta gratuita para evaluar sus necesidades tecnológicas.", en: "First free consultation to evaluate your technology needs." },
+  "con.feat3.t": { es: "Información Segura", en: "Secure Information" },
+  "con.feat3.d": { es: "Su información es completamente confidencial y segura con nosotros.", en: "Your information is completely confidential and secure with us." },
 
   /* ---- TRUST BAR ---- */
   "trust1": { es: "DGII Compliance", en: "DGII Compliance" },
@@ -183,6 +196,7 @@ const translations = {
   "sol.intro":       { es: "Desarrollamos sistemas completos, robustos y fáciles de usar que abordan los retos más importantes de cualquier organización moderna: control, automatización, visibilidad y escalabilidad.", en: "We develop complete, robust and easy-to-use systems that address the most important challenges of any modern organization: control, automation, visibility and scalability." },
 
   /* ---- ABOUT PAGE ---- */
+  "about.specialists":  { es: "Especialistas", en: "Specialists" },
   "about.page.title": { es: "Sobre Nosotros", en: "About Us" },
   "about.page.sub":   { es: "Empresa 100% dominicana con más de 18 años transformando negocios con tecnología de clase mundial.", en: "100% Dominican company with over 18 years transforming businesses with world-class technology." },
   "about.who.label":  { es: "Nuestra historia", en: "Our Story" },
