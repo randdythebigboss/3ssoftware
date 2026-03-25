@@ -19,6 +19,7 @@ const translations = {
   "hero.subtitle":  { es: "Desarrollamos, automatizamos e integramos sistemas que dan a su empresa control total, visibilidad operativa y capacidad real de escalar.", en: "We develop, automate and integrate systems that give your business full control, operational visibility and the real capacity to scale." },
   "hero.cta1":      { es: "Nuestros Servicios", en: "Our Services" },
   "hero.cta2":      { es: "WhatsApp", en: "WhatsApp" },
+  "hero.microcopy": { es: "Respuesta en &lt;24 h &nbsp;·&nbsp; Sin compromiso", en: "Response in &lt;24 h &nbsp;·&nbsp; No commitment" },
   "hero.stat1.v":   { es: "18+", en: "18+" },
   "hero.stat1.l":   { es: "Años de Experiencia", en: "Years of Experience" },
   "hero.stat2.v":   { es: "100+", en: "100+" },

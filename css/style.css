@@ -448,6 +448,7 @@ p  { color: var(--c-body); line-height: 1.75; }
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-weight: 900;
 }
 
 .hero-subtitle {
@@ -462,12 +463,12 @@ p  { color: var(--c-body); line-height: 1.75; }
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-bottom: 56px;
+  margin-bottom: 16px;
 }
 
 .hero-stats {
   display: flex;
-  gap: 36px;
+  gap: 40px;
   flex-wrap: wrap;
 }
 .hero-stat {
@@ -475,7 +476,7 @@ p  { color: var(--c-body); line-height: 1.75; }
   flex-direction: column;
 }
 .hero-stat-value {
-  font-size: 1.75rem;
+  font-size: 1.6rem;
   font-weight: 800;
   color: var(--c-white);
   line-height: 1;
@@ -1381,8 +1382,6 @@ p  { color: var(--c-body); line-height: 1.75; }
 }
 
 @media (max-width: 768px) {
-  :root { --nav-h: 64px; }
-  .section { padding: 72px 0; }
   .nav-links, .nav-right .btn { display: none; }
   .nav-hamburger { display: flex; }
   .services-grid  { grid-template-columns: 1fr; }
@@ -1427,9 +1426,7 @@ p  { color: var(--c-body); line-height: 1.75; }
   margin: 40px 0 32px;
 }
 
-/* Stat row refinement */
-.hero-stats { gap: 40px; }
-.hero-stat-value { font-size: 1.6rem; }
+/* Stat row separators */
 .hero-stat { position: relative; }
 .hero-stat + .hero-stat::before {
   content: '';
@@ -2132,11 +2129,8 @@ h2.section-title + .section-subtitle {
    because earlier trims were too incremental to be noticeable.
    ============================================================ */
 
-/* ── 1. NAVBAR: smaller height, cleaner logo, separated controls ── */
+/* ── 1. NAVBAR: logo scale & control spacing ── */
 @media (max-width: 768px) {
-  /* Shrink nav height from 64px → 58px */
-  :root { --nav-h: 58px; }
-
   /* Smaller logo block: 30px icon, no subtitle tag, tighter gap */
   .logo-mark { width: 30px; height: 30px; font-size: .75rem; border-radius: 7px; }
   .logo-name { font-size: .68rem; letter-spacing: 0; }
@@ -2158,17 +2152,6 @@ h2.section-title + .section-subtitle {
 @media (max-width: 768px) {
   /* Was 13px 26px — still 41px tall. Now 10px 16px = ~35px. */
   .btn-lg { padding: 10px 16px; font-size: .875rem; }
-}
-
-/* ── 5. GLOBAL SECTION RHYTHM ────────────────────────────────── */
-/* Was 64px / 48px — still feels dense between sections on mobile */
-@media (max-width: 768px) {
-  .section     { padding: 52px 0; }
-  .section--sm { padding: 36px 0; }
-}
-@media (max-width: 400px) {
-  .section     { padding: 44px 0; }
-  .section--sm { padding: 28px 0; }
 }
 
 /* ── 6. SECTION HEADINGS: more compact below 480px ─────────── */
@@ -2429,4 +2412,42 @@ h2.section-title + .section-subtitle {
 @media (max-width: 768px) {
   .team-action-icon { width: 44px; height: 44px; font-size: .95rem; }
   .team-actions { gap: 12px; }
+}
+
+/* ============================================================
+   HERO — CONVERSION PASS (v9)
+   ============================================================ */
+
+/* Section white: complement the existing section variants */
+.section--white { background: var(--c-white); }
+
+/* CTA visual hierarchy: primary dominates, secondary recedes */
+.hero-cta .btn-primary {
+  box-shadow: var(--sh-blue);
+  padding: 17px 42px;
+}
+.hero-cta .btn-outline {
+  border-color: rgba(255,255,255,.22);
+  color: rgba(255,255,255,.75);
+}
+
+/* Microcopy trust hint below CTAs */
+.hero-microcopy {
+  font-size: .75rem;
+  color: rgba(255,255,255,.28);
+  letter-spacing: .04em;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-microcopy { font-size: .7rem; }
+  /* Restore tap-target-friendly spacing on mobile */
+  .hero-cta { margin-bottom: 12px; }
+}
+
+@media (max-width: 480px) {
+  /* Microcopy adds noise above fold on small screens — hide it */
+  .hero-microcopy { display: none; }
+  /* CTA margin-bottom now owns the gap before divider */
+  .hero-cta { margin-bottom: 24px; }
 }
