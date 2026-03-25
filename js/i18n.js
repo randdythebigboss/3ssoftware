@@ -113,7 +113,7 @@ const translations = {
   "team3.role":  { es: "Director de Tecnología", en: "Technology Director" },
   "team3.bio":   { es: "Arquitecto de soluciones tecnológicas con profundo dominio en desarrollo e infraestructura.", en: "Technology solutions architect with deep expertise in development and infrastructure." },
   "team4.role":  { es: "Director de Negocios y Servicios", en: "Business & Services Director" },
-  "team4.bio":   { es: "Estratega de negocios y servicios con enfoque en el crecimiento comercial, gestión de clientes y desarrollo de oportunidades.", en: "Business and services strategist focused on commercial growth, client management and opportunity development." },
+  "team4.bio":   { es: "Estratega comercial con foco en crecimiento, captación de clientes y alianzas clave para el negocio.", en: "Commercial strategist focused on business growth, client acquisition and key partnerships." },
 
   /* ---- HOME CTA ---- */
   "cta.label":   { es: "El siguiente paso", en: "The next step" },

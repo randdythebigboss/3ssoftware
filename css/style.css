@@ -2202,8 +2202,8 @@ h2.section-title + .section-subtitle {
 
 /* ── HERO: 768px base mobile rhythm ─────────────────────────── */
 @media (max-width: 768px) {
-  /* Reduce internal content padding in single-column layout */
-  .hero-content { padding: 44px 0 36px; }
+  /* More breathing in single-column layout */
+  .hero-content { padding: 56px 0 44px; }
   /* CTA gap already column-stacked; widen gap between buttons */
   .hero-cta { gap: 12px; }
   /* Both buttons: 48px minimum tap target */
@@ -2216,8 +2216,8 @@ h2.section-title + .section-subtitle {
 @media (max-width: 480px) {
   .hero {
     min-height: auto !important;
-    padding-top: calc(var(--nav-h) + 28px);
-    padding-bottom: 40px;
+    padding-top: calc(var(--nav-h) + 36px);
+    padding-bottom: 44px;
   }
   .hero-content { gap: 0; padding: 0; }
   .hero-eyebrow { display: none; }
@@ -2226,37 +2226,36 @@ h2.section-title + .section-subtitle {
     font-weight: 800;
     line-height: 1.28;
     letter-spacing: -0.4px;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     hyphens: auto;
   }
   .hero-subtitle {
     font-size: 0.925rem;
-    line-height: 1.7;
+    line-height: 1.75;
     opacity: 0.85;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
   }
   /* CTA: stacked full-width, clear visual hierarchy */
-  .hero-cta { gap: 10px; margin-bottom: 28px; }
+  .hero-cta { gap: 12px; margin-bottom: 32px; }
   .hero-cta .btn {
-    padding: 14px 20px;
+    padding: 15px 20px;
     font-size: 0.95rem;
     border-radius: 12px;
-    min-height: 48px;
+    min-height: 50px;
     width: 100%;
     justify-content: center;
     font-weight: 700;
   }
-  /* Primary: stays bold as-is */
-  /* Secondary (outline/WhatsApp): slightly less prominent */
+  /* Secondary: slightly recessed */
   .hero-cta .btn-outline {
-    padding: 13px 20px;
+    padding: 14px 20px;
     font-size: 0.9rem;
     font-weight: 600;
     border: 1.5px solid rgba(255,255,255,0.25);
     background: rgba(255,255,255,0.06);
   }
   /* Stats rhythm */
-  .hero-stats-divider { margin: 20px 0 14px; }
+  .hero-stats-divider { margin: 22px 0 16px; }
   .hero-stat-value { font-size: 1.3rem; }
   .hero-stat-label { font-size: 0.72rem; }
   .hero-right { display: none; }
@@ -2346,11 +2345,61 @@ h2.section-title + .section-subtitle {
 }
 
 /* ============================================================
-   TEAM CARD — Actions Row (WhatsApp primary + LinkedIn secondary)
+   MOBILE MENU — Premium refinement
+   Larger type, hover highlight, close button tap comfort,
+   more breathing in footer.
+   ============================================================ */
+
+/* Generous container spacing */
+.nav-mobile {
+  padding: 92px 28px 44px;
+  gap: 2px;
+}
+
+/* Larger, more readable nav links */
+.nav-mobile a {
+  font-size: 1.45rem;
+  padding: 15px 10px;
+  margin-left: -10px;
+  margin-right: -10px;
+  border-radius: 10px;
+  min-height: 54px;
+}
+
+/* Subtle background highlight on hover/active */
+.nav-mobile a:hover,
+.nav-mobile a.active {
+  color: var(--c-accent);
+  background: rgba(255,255,255,.06);
+  border-bottom-color: transparent;
+}
+
+/* Close button: larger tap target */
+.nav-mobile-close {
+  width: 44px;
+  height: 44px;
+  font-size: 1.35rem;
+}
+
+/* More breathing above WhatsApp CTA */
+.nav-mobile-footer {
+  padding-top: 28px;
+  gap: 16px;
+}
+
+/* Tightest phones: scale down, restore horizontal padding */
+@media (max-width: 360px) {
+  .nav-mobile     { padding: 76px 20px 32px; }
+  .nav-mobile a   { font-size: 1.3rem; padding: 14px 8px; margin-left: -8px; margin-right: -8px; }
+}
+
+/* ============================================================
+   TEAM CARD — Actions Row (3 icon-only: phone, WhatsApp, LinkedIn)
    ============================================================ */
 .team-actions {
   display: flex;
   gap: 10px;
+  justify-content: center;
   align-items: center;
   margin-top: 20px;
   padding-top: 16px;
@@ -2358,25 +2407,43 @@ h2.section-title + .section-subtitle {
   width: 100%;
 }
 
-/* WhatsApp button — grows to fill available width */
-.team-card-wa {
-  flex: 1;
-  justify-content: center;
-}
-
-/* LinkedIn icon — fixed square, visually lighter */
 .team-action-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
-  border-radius: var(--r-s);
-  font-size: .875rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  font-size: .85rem;
   text-decoration: none;
-  transition: background var(--t), color var(--t), transform var(--t), box-shadow var(--t);
+  transition: background var(--t), color var(--t), transform var(--t);
   flex-shrink: 0;
 }
+.team-action-icon:hover {
+  transform: scale(1.08);
+}
+
+/* Phone */
+.team-action-icon--phone {
+  background: var(--c-accent-lt);
+  color: var(--c-accent);
+}
+.team-action-icon--phone:hover {
+  background: var(--c-accent);
+  color: #fff;
+}
+
+/* WhatsApp */
+.team-action-icon--wa {
+  background: #E8F5E9;
+  color: #2E7D32;
+}
+.team-action-icon--wa:hover {
+  background: #25D366;
+  color: #fff;
+}
+
+/* LinkedIn */
 .team-action-icon--li {
   background: #E7F0F9;
   color: #0A66C2;
@@ -2384,15 +2451,12 @@ h2.section-title + .section-subtitle {
 .team-action-icon--li:hover {
   background: #0A66C2;
   color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(10,102,194,.3);
 }
 
 /* Mobile: 44px tap targets */
 @media (max-width: 768px) {
-  .team-action-icon { width: 44px; height: 44px; font-size: .95rem; }
-  .team-card-wa { min-height: 44px; }
-  .team-actions { gap: 10px; }
+  .team-action-icon { width: 44px; height: 44px; font-size: .95rem; border-radius: 12px; }
+  .team-actions { gap: 12px; }
 }
 
 /* ============================================================
@@ -2429,8 +2493,8 @@ h2.section-title + .section-subtitle {
 @media (max-width: 480px) {
   /* Microcopy adds noise above fold on small screens — hide it */
   .hero-microcopy { display: none; }
-  /* CTA margin-bottom now owns the gap before divider */
-  .hero-cta { margin-bottom: 24px; }
+  /* CTA margin-bottom owns the gap before divider (microcopy hidden) */
+  .hero-cta { margin-bottom: 28px; }
 }
 
 /* ============================================================
@@ -2438,20 +2502,20 @@ h2.section-title + .section-subtitle {
    Slightly wider grid, reduced vertical density.
    ============================================================ */
 .team-grid--about {
-  max-width: 1080px;
+  max-width: 1160px;
   margin: 0 auto;
 }
 
 .team-card--about {
-  padding: 24px 22px 20px;
+  padding: 20px 22px 18px;
   background: var(--c-bg);
 }
 
 .team-card--about .team-avatar {
-  width: 96px;
-  height: 96px;
-  font-size: 1.85rem;
-  margin-bottom: 14px;
+  width: 88px;
+  height: 88px;
+  font-size: 1.75rem;
+  margin-bottom: 12px;
 }
 
 .team-card--about h3 {
