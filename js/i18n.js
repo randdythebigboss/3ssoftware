@@ -14,12 +14,12 @@ const translations = {
 
   /* ---- HOME HERO ---- */
   "hero.badge":   { es: "Transformación Digital", en: "Digital Transformation" },
-  "hero.eyebrow": { es: "<em>Empresa 100% Dominicana</em> &nbsp;·&nbsp; Software &amp; Consultoría Tecnológica", en: "<em>100% Dominican Company</em> &nbsp;·&nbsp; Software &amp; Technology Consulting" },
-  "hero.title":   { es: "Tecnología que <span>impulsa</span> el crecimiento de su empresa", en: "Technology that <span>drives</span> your business growth" },
-  "hero.subtitle":  { es: "Desarrollamos, automatizamos e integramos sistemas que dan a su empresa control total, visibilidad operativa y capacidad real de escalar.", en: "We develop, automate and integrate systems that give your business full control, operational visibility and the real capacity to scale." },
-  "hero.cta1":      { es: "Nuestros Servicios", en: "Our Services" },
-  "hero.cta2":      { es: "WhatsApp", en: "WhatsApp" },
-  "hero.microcopy": { es: "Respuesta en &lt;24 h &nbsp;·&nbsp; Sin compromiso", en: "Response in &lt;24 h &nbsp;·&nbsp; No commitment" },
+  "hero.eyebrow": { es: "<em>Empresa 100% Dominicana</em> &nbsp;·&nbsp; Software, Automatización y Consultoría Tecnológica", en: "<em>100% Dominican Company</em> &nbsp;·&nbsp; Software, Automation &amp; Technology Consulting" },
+  "hero.title":   { es: "Tecnología que <span>impulsa</span> el control, la eficiencia y el crecimiento de su empresa", en: "Technology that <span>drives</span> control, efficiency and growth for your business" },
+  "hero.subtitle":  { es: "Desarrollamos software, automatizamos procesos e implementamos soluciones empresariales para que su negocio opere con más control, visibilidad y capacidad de escalar.", en: "We develop software, automate processes and implement business solutions so your company operates with more control, visibility and capacity to scale." },
+  "hero.cta1":      { es: "Ver servicios", en: "See Services" },
+  "hero.cta2":      { es: "Hablar por WhatsApp", en: "Chat on WhatsApp" },
+  "hero.microcopy": { es: "Respuesta en menos de 24 horas &nbsp;·&nbsp; Atención personalizada en español", en: "Response within 24 hours &nbsp;·&nbsp; Personalized support in Spanish" },
   "hero.stat1.v":   { es: "18+", en: "18+" },
   "hero.stat1.l":   { es: "Años de Experiencia", en: "Years of Experience" },
   "hero.stat2.v":   { es: "100+", en: "100+" },

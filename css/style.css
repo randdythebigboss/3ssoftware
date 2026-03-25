@@ -441,7 +441,7 @@ p  { color: var(--c-body); line-height: 1.75; }
 
 .hero-title {
   color: var(--c-white);
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 .hero-title span {
   background: linear-gradient(90deg, #2196F3 0%, #42A5F5 100%);
@@ -2011,10 +2011,6 @@ h2.section-title + .section-subtitle {
   .feature-card  { padding: 28px 18px; }
   .metric-card   { padding: 28px 18px; }
 }
-@media (max-width: 480px) {
-  .team-card[style] { padding: 24px 16px 20px !important; }
-}
-
 /* ─── I. ABOUT PAGE ─────────────────────────────────────────── */
 @media (max-width: 768px) {
   .about-visual-card { padding: 32px 24px; }
@@ -2450,4 +2446,36 @@ h2.section-title + .section-subtitle {
   .hero-microcopy { display: none; }
   /* CTA margin-bottom now owns the gap before divider */
   .hero-cta { margin-bottom: 24px; }
+}
+
+/* ============================================================
+   TEAM CARDS — About page variant
+   Slightly wider grid, reduced vertical density.
+   ============================================================ */
+.team-grid--about {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.team-card--about {
+  padding: 24px 22px 20px;
+  background: var(--c-bg);
+}
+
+.team-card--about .team-avatar {
+  width: 96px;
+  height: 96px;
+  font-size: 1.85rem;
+  margin-bottom: 14px;
+}
+
+.team-card--about h3 {
+  font-size: 1.1rem;
+  margin-bottom: 3px;
+}
+
+@media (max-width: 480px) {
+  .team-card--about {
+    padding: 20px 16px 18px;
+  }
 }
