@@ -2361,3 +2361,87 @@ h2.section-title + .section-subtitle {
   .nav-mobile a     { font-size: 1.2rem; padding: 14px 0; }
   .nav-mobile-logo  { padding-bottom: 18px; }
 }
+
+/* ============================================================
+   TEAM CARD — Contact Row
+   ============================================================ */
+.team-contact-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--c-border);
+}
+
+/* Phone number link */
+.team-contact-phone {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--c-text);
+  text-decoration: none;
+  min-height: 44px;
+  transition: color var(--t);
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+}
+.team-contact-phone i {
+  font-size: .72rem;
+  color: var(--c-accent);
+  flex-shrink: 0;
+  width: 14px;
+  text-align: center;
+}
+.team-contact-phone:hover { color: var(--c-accent); }
+
+/* Icon cluster */
+.team-contact-links {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.team-contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--r-s);
+  font-size: .875rem;
+  text-decoration: none;
+  transition: background var(--t), color var(--t), transform var(--t), box-shadow var(--t);
+  position: relative;
+}
+/* LinkedIn */
+.team-contact-icon--li {
+  background: #E7F0F9;
+  color: #0A66C2;
+}
+.team-contact-icon--li:hover {
+  background: #0A66C2;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(10,102,194,.3);
+}
+/* WhatsApp */
+.team-contact-icon--wa {
+  background: #E8F5E9;
+  color: #2E7D32;
+}
+.team-contact-icon--wa:hover {
+  background: #25D366;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37,211,102,.3);
+}
+
+/* Mobile: enlarge icons to 44px tap target */
+@media (max-width: 768px) {
+  .team-contact-icon { width: 44px; height: 44px; font-size: .95rem; }
+  .team-contact-phone { font-size: .82rem; }
+}
