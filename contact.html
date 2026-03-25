@@ -186,7 +186,7 @@
         <div class="reveal-right">
           <div class="contact-form-card">
             <h2 class="form-title" data-i18n="form.title">Envíenos un Mensaje</h2>
-            <p class="form-subtitle" data-i18n="form.sub">Complete el formulario y le responderemos a la brevedad.</p>
+            <p class="form-subtitle" data-i18n="form.sub">Cuéntenos qué necesita y le ayudamos a definir la solución tecnológica correcta para su negocio.</p>
 
             <form id="contactForm">
               <div class="form-row">
@@ -254,29 +254,54 @@
 
             <!-- Success State -->
             <div class="form-success" aria-live="polite" style="display:none;">
-              <i class="fa-solid fa-circle-check"></i>
-              <h3 data-i18n="form.ok.title">¡Mensaje enviado!</h3>
-              <p data-i18n="form.ok.text">Gracias por contactarnos. Le responderemos a la brevedad posible.</p>
-              <div style="margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-                <a href="https://wa.me/18097031161" class="btn btn-whatsapp" target="_blank" rel="noopener">
-                  <i class="fa-brands fa-whatsapp"></i> WhatsApp
+              <div class="form-state-icon form-state-icon--success">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <h3 data-i18n="form.ok.title">¡Solicitud recibida!</h3>
+              <p data-i18n="form.ok.text">Gracias por contactarnos. Nuestro equipo revisará su solicitud y se pondrá en contacto con usted.</p>
+
+              <ul class="form-next-steps">
+                <li>
+                  <span class="step-icon"><i class="fa-solid fa-inbox"></i></span>
+                  <span data-i18n="form.ok.step1">Recibimos su solicitud correctamente</span>
+                </li>
+                <li>
+                  <span class="step-icon"><i class="fa-solid fa-users"></i></span>
+                  <span data-i18n="form.ok.step2">Nuestro equipo la revisará en detalle</span>
+                </li>
+                <li>
+                  <span class="step-icon"><i class="fa-solid fa-clock"></i></span>
+                  <span data-i18n="form.ok.step3">Le contactaremos dentro de las próximas 24 horas</span>
+                </li>
+              </ul>
+
+              <div class="form-state-actions">
+                <a href="https://wa.me/18097031161?text=Hola%2C%20acabo%20de%20enviar%20una%20solicitud%20desde%20la%20web%20de%203S%20y%20quiero%20dar%20seguimiento"
+                   class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener" data-i18n="form.ok.wa">
+                  <i class="fa-brands fa-whatsapp"></i> Dar seguimiento por WhatsApp
                 </a>
-                <a href="index.html" class="btn btn-outline-dark">
-                  <i class="fa-solid fa-house"></i> Inicio
+                <a href="index.html" class="btn btn-outline-dark" data-i18n="form.ok.home">
+                  <i class="fa-solid fa-house"></i> Volver al inicio
                 </a>
               </div>
+
+              <p class="form-state-note" data-i18n="form.ok.note">
+                <i class="fa-solid fa-bolt"></i> Si su solicitud es urgente, escríbanos por WhatsApp para atención inmediata.
+              </p>
             </div>
 
             <!-- Error State -->
             <div class="form-error" aria-live="polite" style="display:none;">
-              <i class="fa-solid fa-circle-exclamation"></i>
+              <div class="form-state-icon form-state-icon--error">
+                <i class="fa-solid fa-circle-exclamation"></i>
+              </div>
               <h3 data-i18n="form.err.title">No se pudo enviar el mensaje</h3>
-              <p data-i18n="form.err.text">Ocurrió un error al enviar su mensaje. Por favor intente de nuevo o contáctenos por WhatsApp.</p>
-              <div style="margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-                <a href="https://wa.me/18097031161" class="btn btn-whatsapp" target="_blank" rel="noopener">
-                  <i class="fa-brands fa-whatsapp"></i> WhatsApp
+              <p data-i18n="form.err.text">Ocurrió un error al enviar su mensaje. Puede intentarlo de nuevo o contactarnos directamente por WhatsApp.</p>
+              <div class="form-state-actions">
+                <a href="https://wa.me/18097031161" class="btn btn-whatsapp" target="_blank" rel="noopener" data-i18n="form.err.wa">
+                  <i class="fa-brands fa-whatsapp"></i> Escribir por WhatsApp
                 </a>
-                <button class="btn btn-outline-dark" onclick="document.querySelector('.form-error').style.display='none';document.querySelector('#contactForm').style.display='block';">
+                <button class="btn btn-outline-dark form-retry-btn" data-i18n="form.err.retry">
                   <i class="fa-solid fa-rotate-right"></i> Intentar de nuevo
                 </button>
               </div>
@@ -376,42 +401,5 @@
 
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
-  <script>
-document.getElementById("contactForm").addEventListener("submit", async function(e) {
-  e.preventDefault();
-
-  const form = e.target;
-
-  const data = {
-    name: document.getElementById("f-name").value,
-    email: document.getElementById("f-email").value,
-    phone: document.getElementById("f-phone").value,
-    company: document.getElementById("f-company").value,
-    service: document.getElementById("f-service").value,
-    message: document.getElementById("f-msg").value
-  };
-
-  try {
-    const res = await fetch("https://contact-form-handler.ing-randdy.workers.dev", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    });
-
-    if (res.ok) {
-      document.getElementById("contactForm").style.display = "none";
-      document.querySelector(".form-success").style.display = "block";
-    } else {
-      throw new Error("Error sending form");
-    }
-
-  } catch (err) {
-    document.getElementById("contactForm").style.display = "none";
-    document.querySelector(".form-error").style.display = "block";
-  }
-});
-  </script>
 </body>
 </html>

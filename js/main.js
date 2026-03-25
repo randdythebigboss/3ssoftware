@@ -180,48 +180,98 @@
   }
 
   /* ============================================================
-     CONTACT FORM — Formspree via fetch (static site / GitHub Pages)
-     ============================================================
-     This form uses Formspree to handle submissions from a static
-     site (GitHub Pages). Submitted via fetch so there is no redirect
-     and the success/error UI states are shown inline.
+     CONTACT FORM — Cloudflare Worker via fetch
      ============================================================ */
   const contactForm = document.querySelector('#contactForm');
 
   if (contactForm) {
+    const successEl   = document.querySelector('.form-success');
+    const errorEl     = document.querySelector('.form-error');
+    const submitBtn   = contactForm.querySelector('[type="submit"]');
+    const submitLabel = submitBtn ? submitBtn.innerHTML : '';
 
+    /* ── Validation ──────────────────────────────────────────── */
+    function validateForm() {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      let valid = true;
+
+      const required = {
+        'f-name':  contactForm.querySelector('#f-name'),
+        'f-email': contactForm.querySelector('#f-email'),
+        'f-msg':   contactForm.querySelector('#f-msg'),
+      };
+
+      Object.entries(required).forEach(([id, el]) => {
+        if (!el) return;
+        const val = el.value.trim();
+        let ok = val.length > 0;
+        if (id === 'f-email' && ok) ok = emailRegex.test(val);
+
+        if (!ok) {
+          el.style.borderColor = '#e53935';
+          valid = false;
+        } else {
+          el.style.borderColor = '';
+        }
+      });
+
+      return valid;
+    }
+
+    /* ── Submit handler ──────────────────────────────────────── */
     contactForm.addEventListener('submit', async function (e) {
       e.preventDefault();
 
-      const form = this;
-      const submitBtn = form.querySelector('[type="submit"]');
+      if (!validateForm()) return;
 
       submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>&nbsp; Enviando...';
       submitBtn.disabled = true;
 
-      const formData = new FormData(form);
+      const data = {
+        name:    contactForm.querySelector('#f-name').value.trim(),
+        email:   contactForm.querySelector('#f-email').value.trim(),
+        phone:   contactForm.querySelector('#f-phone').value.trim(),
+        company: contactForm.querySelector('#f-company').value.trim(),
+        service: contactForm.querySelector('#f-service').value,
+        message: contactForm.querySelector('#f-msg').value.trim(),
+      };
 
       try {
-        const response = await fetch('https://formspree.io/f/xeeryepz', {
+        const res = await fetch('https://contact-form-handler.ing-randdy.workers.dev', {
           method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
         });
 
-        if (response.ok) {
-          form.style.display = 'none';
-          document.querySelector('.form-success').style.display = 'block';
+        if (res.ok) {
+          contactForm.style.display = 'none';
+          contactForm.reset();
+          successEl.style.display = 'block';
+          successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         } else {
-          throw new Error('Formspree response not ok');
+          throw new Error('Worker response not ok');
         }
 
-      } catch (error) {
-        form.style.display = 'none';
-        document.querySelector('.form-error').style.display = 'block';
+      } catch (err) {
+        contactForm.style.display = 'none';
+        errorEl.style.display = 'block';
+        errorEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
     });
 
-    // Clear validation highlight on input
+    /* ── Retry button ────────────────────────────────────────── */
+    const retryBtn = document.querySelector('.form-retry-btn');
+    if (retryBtn) {
+      retryBtn.addEventListener('click', function () {
+        errorEl.style.display = 'none';
+        contactForm.style.display = '';
+        submitBtn.innerHTML = submitLabel;
+        submitBtn.disabled = false;
+        contactForm.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    }
+
+    /* ── Clear field highlight on input ─────────────────────── */
     contactForm.querySelectorAll('input, textarea').forEach(field => {
       field.addEventListener('input', () => { field.style.borderColor = ''; });
     });
