@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Contacte a System Shop Solutions 3S — WhatsApp, email y formulario de contacto. República Dominicana." />
   <title>Contacto | System Shop Solutions 3S</title>
-  <link rel="stylesheet" href="css/style.css?v=20260325-7" />
+  <link rel="stylesheet" href="css/style.css?v=20260325-8" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 <body>
@@ -93,7 +93,7 @@
 
             <!-- WhatsApp Primary -->
             <div class="contact-item">
-              <div class="contact-item-icon" style="background:#E8F5E9;color:#2E7D32;">
+              <div class="contact-item-icon contact-item-icon--wa">
                 <i class="fa-brands fa-whatsapp"></i>
               </div>
               <div class="contact-item-text">
@@ -104,7 +104,7 @@
 
             <!-- WhatsApp Secondary -->
             <div class="contact-item">
-              <div class="contact-item-icon" style="background:#E8F5E9;color:#2E7D32;">
+              <div class="contact-item-icon contact-item-icon--wa">
                 <i class="fa-brands fa-whatsapp"></i>
               </div>
               <div class="contact-item-text">
@@ -134,23 +134,23 @@
           </div>
 
           <!-- Social Media -->
-          <div style="margin-top:28px;">
-            <strong style="display:block;font-size:.72rem;font-weight:700;color:var(--c-muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px;" data-i18n="con.social.label">Redes Sociales</strong>
-            <div style="display:flex;gap:10px;">
+          <div class="contact-social">
+            <strong class="contact-social-label" data-i18n="con.social.label">Redes Sociales</strong>
+            <div class="contact-social-icons">
               <a href="https://www.facebook.com/p/System-Shop-Solutions-3S-100071545629619/"
-                 class="footer-social" style="background:var(--c-accent-lt);"
+                 class="footer-social"
                  target="_blank" rel="noopener" aria-label="Facebook">
-                <i class="fa-brands fa-facebook-f" style="color:var(--c-accent);"></i>
+                <i class="fa-brands fa-facebook-f"></i>
               </a>
               <a href="http://linkedin.com/company/system-shop-solutions-3s"
-                 class="footer-social" style="background:var(--c-accent-lt);"
+                 class="footer-social"
                  target="_blank" rel="noopener" aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin-in" style="color:var(--c-accent);"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
               </a>
               <a href="https://wa.me/18097031161"
-                 class="footer-social" style="background:#E8F5E9;"
+                 class="footer-social footer-social--wa-icon"
                  target="_blank" rel="noopener" aria-label="WhatsApp">
-                <i class="fa-brands fa-whatsapp" style="color:#2E7D32;"></i>
+                <i class="fa-brands fa-whatsapp"></i>
               </a>
             </div>
           </div>
@@ -170,9 +170,9 @@
           </div>
 
           <!-- Dirección General -->
-          <div class="principal-contact-card" style="margin-top:40px;position:relative;">
-            <div style="position:absolute;top:-10px;left:20px;">
-              <span class="section-label" data-i18n="con.principal.label" style="background:var(--c-bg);padding:0 6px;font-size:.65rem;letter-spacing:.12em;">Dirección General</span>
+          <div class="principal-contact-card">
+            <div class="contact-card-badge">
+              <span class="section-label contact-badge-label" data-i18n="con.principal.label">Dirección General</span>
             </div>
             <div class="principal-contact-avatar">RF</div>
             <div class="principal-contact-info">

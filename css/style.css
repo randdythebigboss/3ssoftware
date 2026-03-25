@@ -1576,6 +1576,7 @@ p  { color: var(--c-body); line-height: 1.75; }
   border: 1px solid var(--c-border);
   border-radius: var(--r-m);
   margin-top: 32px;
+  position: relative;
   transition: var(--t);
 }
 .principal-contact-card:hover {
@@ -2226,14 +2227,14 @@ h2.section-title + .section-subtitle {
     font-weight: 800;
     line-height: 1.28;
     letter-spacing: -0.4px;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     hyphens: auto;
   }
   .hero-subtitle {
     font-size: 0.925rem;
     line-height: 1.75;
     opacity: 0.85;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
   }
   /* CTA: stacked full-width, clear visual hierarchy */
   .hero-cta { gap: 12px; margin-bottom: 32px; }
@@ -2267,6 +2268,9 @@ h2.section-title + .section-subtitle {
   .hero-title    { font-size: 1.4rem; }
   .hero-subtitle { font-size: 0.875rem; }
   .hero-cta .btn { padding: 13px 16px; }
+  /* Stats add visual noise at this size — hide them */
+  .hero-stats-divider,
+  .hero-stats { display: none; }
 }
 
 /* ============================================================
@@ -2278,8 +2282,8 @@ h2.section-title + .section-subtitle {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding-bottom: 22px;
-  margin-bottom: 6px;
+  padding-bottom: 18px;
+  margin-bottom: 4px;
   border-bottom: 1px solid rgba(255,255,255,.1);
 }
 .nav-mobile-logo .logo-mark {
@@ -2352,7 +2356,7 @@ h2.section-title + .section-subtitle {
 
 /* Generous container spacing */
 .nav-mobile {
-  padding: 92px 28px 44px;
+  padding: 80px 28px 44px;
   gap: 2px;
 }
 
@@ -2479,22 +2483,21 @@ h2.section-title + .section-subtitle {
 /* Microcopy trust hint below CTAs */
 .hero-microcopy {
   font-size: .75rem;
-  color: rgba(255,255,255,.28);
+  color: rgba(255,255,255,.38);
   letter-spacing: .04em;
   margin-bottom: 0;
 }
 
 @media (max-width: 768px) {
-  .hero-microcopy { font-size: .7rem; }
-  /* Restore tap-target-friendly spacing on mobile */
+  .hero-microcopy { font-size: .7rem; color: rgba(255,255,255,.42); }
+  /* Tight gap between CTAs and microcopy */
   .hero-cta { margin-bottom: 12px; }
 }
 
 @media (max-width: 480px) {
-  /* Microcopy adds noise above fold on small screens — hide it */
-  .hero-microcopy { display: none; }
-  /* CTA margin-bottom owns the gap before divider (microcopy hidden) */
-  .hero-cta { margin-bottom: 28px; }
+  /* Show microcopy at readable opacity; tighten CTA gap */
+  .hero-microcopy { font-size: .72rem; color: rgba(255,255,255,.44); }
+  .hero-cta { margin-bottom: 14px; }
 }
 
 /* ============================================================
@@ -2507,15 +2510,15 @@ h2.section-title + .section-subtitle {
 }
 
 .team-card--about {
-  padding: 20px 22px 18px;
+  padding: 18px 28px 16px;
   background: var(--c-bg);
 }
 
 .team-card--about .team-avatar {
-  width: 88px;
-  height: 88px;
-  font-size: 1.75rem;
-  margin-bottom: 12px;
+  width: 80px;
+  height: 80px;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
 }
 
 .team-card--about h3 {
@@ -2525,6 +2528,51 @@ h2.section-title + .section-subtitle {
 
 @media (max-width: 480px) {
   .team-card--about {
-    padding: 20px 16px 18px;
+    padding: 16px 18px 14px;
   }
+}
+
+/* ============================================================
+   CONTACT PAGE — Inline style replacements
+   ============================================================ */
+
+/* WA-colored contact item icon */
+.contact-item-icon--wa {
+  background: #E8F5E9;
+  color: #2E7D32;
+}
+
+/* Social section block */
+.contact-social { margin-top: 28px; }
+.contact-social-label {
+  display: block;
+  font-size: .72rem;
+  font-weight: 700;
+  color: var(--c-muted);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin-bottom: 12px;
+}
+.contact-social-icons { display: flex; gap: 10px; }
+
+/* Light-background social icons (contact page variant) */
+.contact-social-icons .footer-social {
+  background: var(--c-accent-lt);
+}
+.contact-social-icons .footer-social i { color: var(--c-accent); }
+.contact-social-icons .footer-social--wa-icon { background: #E8F5E9; }
+.contact-social-icons .footer-social--wa-icon i { color: #2E7D32; }
+
+/* Dirección General card label badge */
+.contact-card-badge {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+}
+.contact-card-badge .section-label,
+.contact-badge-label {
+  background: var(--c-bg);
+  padding: 0 6px;
+  font-size: .65rem;
+  letter-spacing: .12em;
 }

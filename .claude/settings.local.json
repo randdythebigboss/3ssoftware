@@ -21,7 +21,8 @@
       "Bash(for f:*)",
       "Bash(do)",
       "Bash(sed -i 's/v=20260325-1/v=20260325-2/g' \"$f\")",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash(grep -l \"v=20260325-7\" *.html)"
     ]
   }
 }
