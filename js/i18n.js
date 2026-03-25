@@ -19,7 +19,7 @@ const translations = {
   "hero.subtitle":  { es: "Desarrollamos software, automatizamos procesos e implementamos soluciones empresariales para que su negocio opere con más control, visibilidad y capacidad de escalar.", en: "We develop software, automate processes and implement business solutions so your company operates with more control, visibility and capacity to scale." },
   "hero.cta1":      { es: "Ver servicios", en: "See Services" },
   "hero.cta2":      { es: "Hablar por WhatsApp", en: "Chat on WhatsApp" },
-  "hero.microcopy": { es: "Respuesta en menos de 24 horas &nbsp;·&nbsp; Atención personalizada en español", en: "Response within 24 hours &nbsp;·&nbsp; Personalized support in Spanish" },
+  "hero.microcopy": { es: "Respuesta en menos de 24 horas &nbsp;·&nbsp; Atención personalizada", en: "Response within 24 hours &nbsp;·&nbsp; Personalized attention" },
   "hero.stat1.v":   { es: "18+", en: "18+" },
   "hero.stat1.l":   { es: "Años de Experiencia", en: "Years of Experience" },
   "hero.stat2.v":   { es: "100+", en: "100+" },
@@ -153,9 +153,7 @@ const translations = {
   "footer.srv3":    { es: "Gestión de TI", en: "IT Management" },
   "footer.srv4":    { es: "Consultoría", en: "Consulting" },
   "footer.contact": { es: "Contacto", en: "Contact" },
-  "footer.copy":    { es: "© 2025 System Shop Solutions 3S. Todos los derechos reservados.", en: "© 2025 System Shop Solutions 3S. All rights reserved." },
-  "footer.privacy": { es: "Privacidad", en: "Privacy" },
-  "footer.terms":   { es: "Términos", en: "Terms" },
+  "footer.copy":    { es: `© ${new Date().getFullYear()} System Shop Solutions 3S. Todos los derechos reservados.`, en: `© ${new Date().getFullYear()} System Shop Solutions 3S. All rights reserved.` },
 
   /* ---- SERVICES PAGE ---- */
   "srv.page.title":  { es: "Nuestros Servicios", en: "Our Services" },

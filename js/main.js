@@ -278,6 +278,15 @@
       });
     }
 
+    /* ── Phone: strip non-phone characters ──────────────────── */
+    const phoneField = contactForm.querySelector('#f-phone');
+    if (phoneField) {
+      phoneField.addEventListener('input', function () {
+        const clean = this.value.replace(/[^0-9\s\+\-\(\)]/g, '');
+        if (this.value !== clean) this.value = clean;
+      });
+    }
+
     /* ── Clear field highlight on input ─────────────────────── */
     contactForm.querySelectorAll('input, textarea').forEach(field => {
       field.addEventListener('input', () => {
