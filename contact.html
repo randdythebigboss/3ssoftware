@@ -186,39 +186,39 @@
         <div class="reveal-right">
           <div class="contact-form-card">
             <h2 class="form-title" data-i18n="form.title">Envíenos un Mensaje</h2>
-            <p class="form-subtitle" data-i18n="form.sub">Cuéntenos qué necesita y le ayudamos a definir la solución tecnológica correcta para su negocio.</p>
+            <p class="form-subtitle" data-i18n="form.sub">Cuéntenos su necesidad y le contactamos en menos de 24 horas.</p>
 
             <form id="contactForm">
               <div class="form-row">
                 <div class="form-group">
-                  <label for="f-name" data-i18n="form.name">Nombre Completo</label>
+                  <label for="f-name" data-i18n="form.name">Nombre completo</label>
                   <input type="text" id="f-name" name="name" required autocomplete="name"
                     data-i18n-placeholder="form.ph.name" placeholder="Juan Pérez" />
                 </div>
                 <div class="form-group">
-                  <label for="f-company" data-i18n="form.company">Empresa</label>
+                  <label for="f-email" data-i18n="form.email">Correo electrónico</label>
+                  <input type="email" id="f-email" name="email" required autocomplete="email"
+                    data-i18n-placeholder="form.ph.email" placeholder="juan@empresa.com" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="f-phone" data-i18n="form.phone">Teléfono <span style="font-weight:400;color:var(--c-muted);font-size:.8em;" data-i18n="form.optional">(opcional)</span></label>
+                  <input type="tel" id="f-phone" name="phone" autocomplete="tel"
+                    data-i18n-placeholder="form.ph.phone" placeholder="+1 809 000 0000" />
+                </div>
+                <div class="form-group">
+                  <label for="f-company" data-i18n="form.company">Empresa <span style="font-weight:400;color:var(--c-muted);font-size:.8em;" data-i18n="form.optional">(opcional)</span></label>
                   <input type="text" id="f-company" name="company" autocomplete="organization"
                     data-i18n-placeholder="form.ph.company" placeholder="Mi Empresa S.R.L." />
                 </div>
               </div>
 
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="f-email" data-i18n="form.email">Correo Electrónico</label>
-                  <input type="email" id="f-email" name="email" required autocomplete="email"
-                    data-i18n-placeholder="form.ph.email" placeholder="juan@empresa.com" />
-                </div>
-                <div class="form-group">
-                  <label for="f-phone" data-i18n="form.phone">Teléfono</label>
-                  <input type="tel" id="f-phone" name="phone" autocomplete="tel"
-                    data-i18n-placeholder="form.ph.phone" placeholder="+1 809 000 0000" />
-                </div>
-              </div>
-
               <div class="form-group">
-                <label for="f-service" data-i18n="form.service">Servicio de interés</label>
+                <label for="f-service" data-i18n="form.service">Servicio de interés <span style="font-weight:400;color:var(--c-muted);font-size:.8em;" data-i18n="form.optional">(opcional)</span></label>
                 <select id="f-service" name="service">
-                  <option value="" data-i18n="form.opt0">Seleccione un servicio...</option>
+                  <option value="" data-i18n="form.opt0">¿En qué podemos ayudarle?</option>
                   <option value="dev" data-i18n="form.opt1">Desarrollo de Software a Medida</option>
                   <option value="auto" data-i18n="form.opt2">Automatización de Procesos (Power Platform)</option>
                   <option value="itsm" data-i18n="form.opt3">Implementación de Jira / ITSM / CMDB</option>
@@ -237,10 +237,10 @@
               </div>
 
               <div class="form-group">
-                <label for="f-msg" data-i18n="form.message">Mensaje</label>
-                <textarea id="f-msg" name="message" rows="5" required
+                <label for="f-msg" data-i18n="form.message" style="font-weight:600;">¿En qué podemos ayudarle?</label>
+                <textarea id="f-msg" name="message" rows="6" required
                   data-i18n-placeholder="form.ph.message"
-                  placeholder="Cuéntenos sobre su proyecto o necesidad..."></textarea>
+                  placeholder="Cuéntenos brevemente qué necesita..."></textarea>
               </div>
 
               <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;" data-i18n="form.submit">
