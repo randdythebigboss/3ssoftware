@@ -188,25 +188,7 @@
             <h2 class="form-title" data-i18n="form.title">Envíenos un Mensaje</h2>
             <p class="form-subtitle" data-i18n="form.sub">Complete el formulario y le responderemos a la brevedad.</p>
 
-            <!--
-              ============================================================
-              CONTACT FORM — Formspree Integration
-              ============================================================
-              This form uses Formspree to handle submissions from a static
-              site (GitHub Pages). No backend or SDK required.
-              Endpoint: https://formspree.io/f/xeeryepz
-              - On submit, Formspree delivers the email and redirects to _next.
-              - The _gotcha field is a honeypot to block spam bots.
-              ============================================================
-            -->
-            <form
-              id="contactForm"
-              action="https://formspree.io/f/xeeryepz"
-              method="POST"
-            >
-              <!-- Formspree control fields -->
-              <input type="hidden" name="_subject" value="Nuevo contacto desde 3S Software">
-              <input type="text"   name="_gotcha"  style="display:none" tabindex="-1" autocomplete="off">
+            <form id="contactForm">
               <div class="form-row">
                 <div class="form-group">
                   <label for="f-name" data-i18n="form.name">Nombre Completo</label>
@@ -394,5 +376,42 @@
 
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
+  <script>
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+
+  const data = {
+    name: document.getElementById("f-name").value,
+    email: document.getElementById("f-email").value,
+    phone: document.getElementById("f-phone").value,
+    company: document.getElementById("f-company").value,
+    service: document.getElementById("f-service").value,
+    message: document.getElementById("f-msg").value
+  };
+
+  try {
+    const res = await fetch("https://contact-form-handler.ing-randdy.workers.dev", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
+
+    if (res.ok) {
+      document.getElementById("contactForm").style.display = "none";
+      document.querySelector(".form-success").style.display = "block";
+    } else {
+      throw new Error("Error sending form");
+    }
+
+  } catch (err) {
+    document.getElementById("contactForm").style.display = "none";
+    document.querySelector(".form-error").style.display = "block";
+  }
+});
+  </script>
 </body>
 </html>
