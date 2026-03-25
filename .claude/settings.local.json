@@ -17,7 +17,11 @@
       "Bash(/dev/null --include=*.js --include=*.ts)",
       "Bash(ls -la 'c:\\\\Users\\\\rrfeliz\\\\OneDrive - Santo Domingo Motors Company \\(SADOMOCO\\)\\\\Desktop\\\\workspace\\\\3s-website')",
       "Bash(find c:Usersrrfeliz -path *ing-randdy* -o -path *worker* -o -path *cloudflare*)",
-      "Bash(find 'c:\\\\Users\\\\rrfeliz\\\\OneDrive - Santo Domingo Motors Company \\(SADOMOCO\\)\\\\Desktop' -type f \\\\\\(-name *email* -o -name *template* -o -name *.html \\\\\\))"
+      "Bash(find 'c:\\\\Users\\\\rrfeliz\\\\OneDrive - Santo Domingo Motors Company \\(SADOMOCO\\)\\\\Desktop' -type f \\\\\\(-name *email* -o -name *template* -o -name *.html \\\\\\))",
+      "Bash(for f:*)",
+      "Bash(do)",
+      "Bash(sed -i 's/v=20260325-1/v=20260325-2/g' \"$f\")",
+      "Bash(done)"
     ]
   }
 }

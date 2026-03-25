@@ -2214,23 +2214,150 @@ h2.section-title + .section-subtitle {
 }
 
 /* ============================================================
-   HERO MOBILE — Single authoritative override (≤480px)
+   MOBILE UX REFRESH — Hero + Menu (authoritative)
    ============================================================ */
+
+/* ── HERO: 768px base mobile rhythm ─────────────────────────── */
+@media (max-width: 768px) {
+  /* Reduce internal content padding in single-column layout */
+  .hero-content { padding: 44px 0 36px; }
+  /* CTA gap already column-stacked; widen gap between buttons */
+  .hero-cta { gap: 12px; }
+  /* Both buttons: 48px minimum tap target */
+  .hero-cta .btn { min-height: 48px; }
+  /* CTA margin-bottom: loosen before stats */
+  .hero-cta { margin-bottom: 32px; }
+}
+
+/* ── HERO: 480px — full authoritative override ───────────────── */
 @media (max-width: 480px) {
-  .hero { min-height: auto !important; padding-top: calc(var(--nav-h) + 20px); padding-bottom: 32px; }
-  .hero-content { gap: 14px; }
+  .hero {
+    min-height: auto !important;
+    padding-top: calc(var(--nav-h) + 28px);
+    padding-bottom: 40px;
+  }
+  .hero-content { gap: 0; padding: 0; }
   .hero-eyebrow { display: none; }
-  .hero-title { font-size: 1.5rem; font-weight: 700; line-height: 1.25; letter-spacing: -0.3px; margin-bottom: 10px; hyphens: auto; }
-  .hero-subtitle { font-size: 0.9rem; line-height: 1.6; opacity: 0.9; margin-bottom: 16px; }
-  .hero-cta { gap: 8px; }
-  .hero-cta .btn { padding: 10px 14px; font-size: 0.9rem; border-radius: 10px; }
-  .hero-cta .btn-outline { border: 1px solid rgba(37,211,102,0.3); background: rgba(37,211,102,0.05); font-size: 0.875rem; }
-  .hero-stats-divider { margin: 16px 0 10px; }
-  .hero-stat-value { font-size: 1.2rem; }
-  .hero-stat-label { font-size: 0.7rem; }
+  .hero-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 1.28;
+    letter-spacing: -0.4px;
+    margin-bottom: 12px;
+    hyphens: auto;
+  }
+  .hero-subtitle {
+    font-size: 0.925rem;
+    line-height: 1.7;
+    opacity: 0.85;
+    margin-bottom: 24px;
+  }
+  /* CTA: stacked full-width, clear visual hierarchy */
+  .hero-cta { gap: 10px; margin-bottom: 28px; }
+  .hero-cta .btn {
+    padding: 14px 20px;
+    font-size: 0.95rem;
+    border-radius: 12px;
+    min-height: 48px;
+    width: 100%;
+    justify-content: center;
+    font-weight: 700;
+  }
+  /* Primary: stays bold as-is */
+  /* Secondary (outline/WhatsApp): slightly less prominent */
+  .hero-cta .btn-outline {
+    padding: 13px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1.5px solid rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.06);
+  }
+  /* Stats rhythm */
+  .hero-stats-divider { margin: 20px 0 14px; }
+  .hero-stat-value { font-size: 1.3rem; }
+  .hero-stat-label { font-size: 0.72rem; }
   .hero-right { display: none; }
 }
+
+/* ── HERO: 360px — tightest phones ──────────────────────────── */
 @media (max-width: 360px) {
-  .hero-title    { font-size: 1.35rem; }
+  .hero { padding-top: calc(var(--nav-h) + 18px); padding-bottom: 32px; }
+  .hero-title    { font-size: 1.4rem; }
   .hero-subtitle { font-size: 0.875rem; }
+  .hero-cta .btn { padding: 13px 16px; }
+}
+
+/* ============================================================
+   MOBILE MENU — UX Refresh
+   ============================================================ */
+
+/* Logo block at top of mobile menu */
+.nav-mobile-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 22px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.nav-mobile-logo .logo-mark {
+  width: 38px;
+  height: 38px;
+  font-size: .88rem;
+  border-radius: 9px;
+  flex-shrink: 0;
+}
+.nav-mobile-logo .logo-name {
+  font-size: .8rem;
+  font-weight: 700;
+  color: rgba(255,255,255,.9);
+  letter-spacing: 0;
+  display: block;
+}
+.nav-mobile-logo .logo-tag {
+  font-size: .58rem;
+  color: rgba(255,255,255,.4);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  display: block;
+}
+
+/* Nav links: more spacious, more legible separators */
+.nav-mobile a {
+  padding: 16px 0;
+  font-size: 1.35rem;
+  border-bottom-color: rgba(255,255,255,.09);
+  display: flex;
+  align-items: center;
+  min-height: 52px;
+}
+
+/* Footer: stronger WhatsApp CTA */
+.nav-mobile-footer {
+  gap: 14px;
+  padding-top: 24px;
+}
+.nav-mobile-footer .btn-whatsapp {
+  padding: 15px 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 12px;
+  letter-spacing: .01em;
+}
+
+/* Footer note (optional branding line) */
+.nav-mobile-note {
+  text-align: center;
+  font-size: .65rem;
+  color: rgba(255,255,255,.28);
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* Tight screens */
+@media (max-width: 360px) {
+  .nav-mobile       { padding: 72px 20px 28px; }
+  .nav-mobile a     { font-size: 1.2rem; padding: 14px 0; }
+  .nav-mobile-logo  { padding-bottom: 18px; }
 }

@@ -228,7 +228,10 @@
 
       if (!validateForm()) return;
 
-      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>&nbsp; Enviando...';
+      const sendingText = (typeof translations !== 'undefined' && translations['form.sending'])
+        ? translations['form.sending'][currentLang] || 'Enviando...'
+        : 'Enviando...';
+      submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i>&nbsp; ${sendingText}`;
       submitBtn.disabled = true;
 
       const data = {
