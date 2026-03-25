@@ -1069,6 +1069,7 @@ p  { color: var(--c-body); line-height: 1.75; }
 }
 .form-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; }
 .form-subtitle { font-size: .9rem; color: var(--c-muted); margin-bottom: 32px; }
+.field-error { display: none; font-size: .78rem; color: #e53935; margin-top: 5px; }
 
 .form-row {
   display: grid;

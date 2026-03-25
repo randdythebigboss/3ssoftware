@@ -191,6 +191,8 @@
     const submitLabel = submitBtn ? submitBtn.innerHTML : '';
 
     /* ── Validation ──────────────────────────────────────────── */
+    const emailError = document.getElementById('f-email-error');
+
     function validateForm() {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       let valid = true;
@@ -209,9 +211,11 @@
 
         if (!ok) {
           el.style.borderColor = '#e53935';
+          if (id === 'f-email' && emailError) emailError.style.display = 'block';
           valid = false;
         } else {
           el.style.borderColor = '';
+          if (id === 'f-email' && emailError) emailError.style.display = 'none';
         }
       });
 
@@ -273,7 +277,10 @@
 
     /* ── Clear field highlight on input ─────────────────────── */
     contactForm.querySelectorAll('input, textarea').forEach(field => {
-      field.addEventListener('input', () => { field.style.borderColor = ''; });
+      field.addEventListener('input', () => {
+        field.style.borderColor = '';
+        if (field.id === 'f-email' && emailError) emailError.style.display = 'none';
+      });
     });
   }
 
