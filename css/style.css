@@ -2346,18 +2346,25 @@ h2.section-title + .section-subtitle {
 }
 
 /* ============================================================
-   TEAM CARD — Actions Row (icon-only, 3 icons per card)
+   TEAM CARD — Actions Row (WhatsApp primary + LinkedIn secondary)
    ============================================================ */
 .team-actions {
   display: flex;
   gap: 10px;
-  justify-content: center;
   align-items: center;
   margin-top: 20px;
   padding-top: 16px;
   border-top: 1px solid var(--c-border);
   width: 100%;
 }
+
+/* WhatsApp button — grows to fill available width */
+.team-card-wa {
+  flex: 1;
+  justify-content: center;
+}
+
+/* LinkedIn icon — fixed square, visually lighter */
 .team-action-icon {
   display: flex;
   align-items: center;
@@ -2370,29 +2377,6 @@ h2.section-title + .section-subtitle {
   transition: background var(--t), color var(--t), transform var(--t), box-shadow var(--t);
   flex-shrink: 0;
 }
-/* Phone */
-.team-action-icon--phone {
-  background: var(--c-accent-lt);
-  color: var(--c-accent);
-}
-.team-action-icon--phone:hover {
-  background: var(--c-accent);
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(33,150,243,.3);
-}
-/* WhatsApp */
-.team-action-icon--wa {
-  background: #E8F5E9;
-  color: #2E7D32;
-}
-.team-action-icon--wa:hover {
-  background: #25D366;
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(37,211,102,.3);
-}
-/* LinkedIn */
 .team-action-icon--li {
   background: #E7F0F9;
   color: #0A66C2;
@@ -2407,7 +2391,8 @@ h2.section-title + .section-subtitle {
 /* Mobile: 44px tap targets */
 @media (max-width: 768px) {
   .team-action-icon { width: 44px; height: 44px; font-size: .95rem; }
-  .team-actions { gap: 12px; }
+  .team-card-wa { min-height: 44px; }
+  .team-actions { gap: 10px; }
 }
 
 /* ============================================================
